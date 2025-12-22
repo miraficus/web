@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Čínský zvěrokruh + horoskop (Material Design 3)</title>
+
+<!-- Material Web Components (M3) -->
+<script type="module" src="https://esm.run/@material/web/all"></script>
+
+<style>
+    :root {
+        --theme-color: #6200ee;
+    }
+
+    /* Světlý režim */
+    :root[data-theme="light"] {
+        --bg: #f3f3f3;
+        --text: #000;
+        --card-bg: #fff;
+
+        /* M3 barvy pro input */
+        --md-sys-color-surface: #ffffff;
+        --md-sys-color-on-surface: #000000;
+        --md-sys-color-outline: #444444;
+    }
+
+    /* Tmavý režim */
+    :root[data-theme="dark"] {
+        --bg: #121212;
+        --text: #fff;
+        --card-bg: #1e1e1e;
+
+        /* M3 barvy pro input */
+        --md-sys-color-surface: #1e1e1e;
+        --md-sys-color-on-surface: #ffffff;
+        --md-sys-color-outline: #bbbbbb;
+    }
+
+    body {
+        font-family: Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    md-card {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        display: block;
+        background: var(--card-bg);
+        color: var(--text);
+        border-radius: 16px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    h2 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    h3 {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        text-align: center;
+        opacity: 0.7;
+        margin-bottom: 30px;
+    }
+
+    .result-line {
+        margin: 8px 0;
+        font-size: 18px;
+    }
+
+    .label {
+        font-weight: 600;
+    }
+
+    .emoji {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .accent-border {
+        border-left: 6px solid var(--theme-color);
+    }
+
+    /* Přepínač režimu */
+    .theme-toggle {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 26px;
+        user-select: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Přepínač režimu -->
+<div class="theme-toggle" id="themeToggle">🌙</div>
+
+<div class="container">
+    <h2>Výpočet znamení</h2>
+    <div class="subtitle">Západní horoskop • Čínské znamení • Prvek • Spojené označení</div>
+
+    <md-card>
+        <h3>Zadej datum narození</h3>
+
+        <md-outlined-text-field
+            id="datum"
+            type="date"
+            label="Datum narození"
+            style="width: 100%; margin-top: 10px;">
+        </md-outlined-text-field>
+
+        <md-filled-button style="margin-top: 20px;" onclick="spocitej()">
+            Zjistit znamení
+        </md-filled-button>
+    </md-card>
+
+    <div id="vysledek"></div>
+</div>
+
+<script>
+// Emoji pro zvířata
+const emojiZvire = {
+    "Krysa": "🐭",
+    "Buvol": "🐂",
+    "Tygr": "🐅",
+    "Zajíc": "🐇",
+    "Drak": "🐉",
+    "Had": "🐍",
+    "Kůň": "🐎",
+    "Koza": "🐐",
+    "Opice": "🐒",
+    "Kohout": "🐓",
+    "Pes": "🐕",
+    "Vepř": "🐖"
+};
+
+// Barvy podle prvku
+const barvyPrvku = {
+    "Kov": "#9e9e9e",
+    "Voda": "#2196f3",
+    "Dřevo": "#4caf50",
+    "Oheň": "#f44336",
+    "Země": "#795548"
+};
+
+// Přídavná jména pro západní znamení
+const zapadniPridavna = {
+    "Beran": "Beraní",
+    "Býk": "Býčí",
+    "Blíženci": "Blíženecký",
+    "Rak": "Rakový",
+    "Lev": "Lví",
+    "Panna": "Panní",
+    "Váhy": "Vahový",
+    "Štír": "Štíří",
+    "Střelec": "Střelecký",
+    "Kozoroh": "Kozoroží",
+    "Vodnář": "Vodnářský",
+    "Ryby": "Rybí"
+};
+
+// Přídavná jména pro prvky
+const prvekPridavne = {
+    "Kov": "Kovový",
+    "Voda": "Vodní",
+    "Dřevo": "Dřevěný",
+    "Oheň": "Ohnivý",
+    "Země": "Zemní"
+};
+
+// Čínská zvířata
+const zvirata = [
+    "Krysa", "Buvol", "Tygr", "Zajíc", "Drak", "Had",
+    "Kůň", "Koza", "Opice", "Kohout", "Pes", "Vepř"
+];
+
+// Přesné začátky čínského nového roku
+const cinskeNoveRoky = {
+    1980: "1980-02-16", 1981: "1981-02-05", 1982: "1982-01-25",
+    1983: "1983-02-13", 1984: "1984-02-02", 1985: "1985-02-20",
+    1986: "1986-02-09", 1987: "1987-01-29", 1988: "1988-02-17",
+    1989: "1989-02-06", 1990: "1990-01-27", 1991: "1991-02-15",
+    1992: "1992-02-04", 1993: "1993-01-23", 1994: "1994-02-10",
+    1995: "1995-01-31", 1996: "1996-02-19", 1997: "1997-02-07",
+    1998: "1998-01-28", 1999: "1999-02-16", 2000: "2000-02-05",
+    2001: "2001-01-24", 2002: "2002-02-12", 2003: "2003-02-01",
+    2004: "2004-01-22", 2005: "2005-02-09", 2006: "2006-01-29",
+    2007: "2007-02-18", 2008: "2008-02-07", 2009: "2009-01-26",
+    2010: "2010-02-14", 2011: "2011-02-03", 2012: "2012-01-23",
+    2013: "2013-02-10", 2014: "2014-01-31", 2015: "2015-02-19",
+    2016: "2016-02-08", 2017: "2017-01-28", 2018: "2018-02-16",
+    2019: "2019-02-05", 2020: "2020-01-25", 2021: "2021-02-12",
+    2022: "2022-02-01", 2023: "2023-01-22", 2024: "2024-02-10"
+};
+
+function zjistiCinskeZvire(rok) {
+    const index = (rok - 1900) % 12;
+    return zvirata[(index + 12) % 12];
+}
+
+function zjistiCinskyPrvek(rok) {
+    const prvky = ["Kov", "Kov", "Voda", "Voda", "Dřevo", "Dřevo", "Oheň", "Oheň", "Země", "Země"];
+    return prvky[rok % 10];
+}
+
+function zjistiZapadniZnameni(mesic, den) {
+    if ((mesic === 3 && den >= 21) || (mesic === 4 && den <= 19)) return "Beran";
+    if ((mesic === 4 && den >= 20) || (mesic === 5 && den <= 20)) return "Býk";
+    if ((mesic === 5 && den >= 21) || (mesic === 6 && den <= 20)) return "Blíženci";
+    if ((mesic === 6 && den >= 21) || (mesic === 7 && den <= 22)) return "Rak";
+    if ((mesic === 7 && den >= 23) || (mesic === 8 && den <= 22)) return "Lev";
+    if ((mesic === 8 && den >= 23) || (mesic === 9 && den <= 22)) return "Panna";
+    if ((mesic === 9 && den >= 23) || (mesic === 10 && den <= 22)) return "Váhy";
+    if ((mesic === 10 && den >= 23) || (mesic === 11 && den <= 21)) return "Štír";
+    if ((mesic === 11 && den >= 22) || (mesic === 12 && den <= 21)) return "Střelec";
+    if ((mesic === 12 && den >= 22) || (mesic === 1 && den <= 19)) return "Kozoroh";
+    if ((mesic === 1 && den >= 20) || (mesic === 2 && den <= 18)) return "Vodnář";
+    if ((mesic === 2 && den >= 19) || (mesic === 3 && den <= 20)) return "Ryby";
+    return "Neznámé znamení";
+}
+
+function spocitej() {
+    const input = document.getElementById("datum").value;
+    if (!input) {
+        alert("Zadej prosím datum narození.");
+        return;
+    }
+
+    const datum = new Date(input);
+    const rok = datum.getFullYear();
+    const mesic = datum.getMonth() + 1;
+    const den = datum.getDate();
+
+    const zapadni = zjistiZapadniZnameni(mesic, den);
+
+    let cinskyRok = rok;
+    const cny = cinskeNoveRoky[rok] ? new Date(cinskeNoveRoky[rok]) : new Date(`${rok}-02-04`);
+    if (datum < cny) cinskyRok--;
+
+    const cinskeZvire = zjistiCinskeZvire(cinskyRok);
+    const cinskyPrvek = zjistiCinskyPrvek(cinskyRok);
+
+    const kombinace =
+        `${zapadniPridavna[zapadni]} ` +
+        `${prvekPridavne[cinskyPrvek]} ` +
+        `${cinskeZvire}`;
+
+    // Nastavení barevného tématu
+    document.documentElement.style.setProperty("--theme-color", barvyPrvku[cinskyPrvek]);
+
+    document.getElementById("vysledek").innerHTML = `
+        <md-card class="accent-border">
+            <div class="emoji">${emojiZvire[cinskeZvire]}</div>
+            <h3>Výsledek</h3>
+            <div class="result-line"><span class="label">Datum:</span> ${den}.${mesic}.${rok}</div>
+            <div class="result-line"><span class="label">Západní horoskop:</span> ${zapadni}</div>
+            <div class="result-line"><span class="label">Čínský rok:</span> ${cinskyRok}</div>
+            <div class="result-line"><span class="label">Čínské znamení:</span> ${cinskeZvire}</div>
+            <div class="result-line"><span class="label">Prvek:</span> ${cinskyPrvek}</div>
+            <div class="result-line"><span class="label">Spojené označení:</span> ${kombinace}</div>
+        </md-card>
+    `;
+}
+
+/* ------------------------------
+   Přepínač světlý/tmavý režim
+--------------------------------*/
+const themeToggle = document.getElementById("themeToggle");
+
+// Načtení uloženého režimu
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    themeToggle.textContent = savedTheme === "dark" ? "🌞" : "🌙";
+} else {
+    // Pokud není uloženo, použij systémové nastavení
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+    themeToggle.textContent = prefersDark ? "🌞" : "🌙";
+}
+
+// Kliknutí na přepínač
+themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+
+    themeToggle.textContent = next === "dark" ? "🌞" : "🌙";
+});
+</script>
+
+</body>
+</html>
