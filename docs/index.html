@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Mira – Projekty (Material Design 3)</title>
+
+<!-- Material Web Components (M3) -->
+<script type="module" src="https://esm.run/@material/web/all"></script>
+
+<style>
+    :root {
+        --theme-color: #6200ee;
+    }
+
+    /* Světlý režim */
+    :root[data-theme="light"] {
+        --bg: #f3f3f3;
+        --text: #000;
+        --card-bg: #fff;
+
+        --md-sys-color-surface: #ffffff;
+        --md-sys-color-on-surface: #000000;
+        --md-sys-color-outline: #444444;
+    }
+
+    /* Tmavý režim */
+    :root[data-theme="dark"] {
+        --bg: #121212;
+        --text: #fff;
+        --card-bg: #1e1e1e;
+
+        --md-sys-color-surface: #1e1e1e;
+        --md-sys-color-on-surface: #ffffff;
+        --md-sys-color-outline: #bbbbbb;
+    }
+
+    body {
+        font-family: Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        text-align: center;
+        opacity: 0.7;
+        margin-bottom: 40px;
+    }
+
+    md-card {
+        display: block;
+        background: var(--card-bg);
+        color: var(--text);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 16px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .project-title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .project-desc {
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
+
+    .theme-toggle {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 26px;
+        user-select: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Přepínač režimu -->
+<div class="theme-toggle" id="themeToggle">🌙</div>
+
+<div class="container">
+    <h1>Mira – Projekty</h1>
+    <div class="subtitle">Moje nástroje, výpočty a experimenty</div>
+
+    <!-- Projekt 1 -->
+    <md-card>
+        <div class="project-title">🔮 Výpočet znamení</div>
+        <div class="project-desc">
+            Západní horoskop, čínské znamení, prvek, emoji a barevné téma podle prvku.
+        </div>
+        <md-filled-button onclick="location.href='znameni.html'">
+            Otevřít
+        </md-filled-button>
+    </md-card>
+
+    <!-- Projekt 2 – zatím placeholder -->
+    <md-card>
+        <div class="project-title">🧮 Kalkulátor 3D tisku</div>
+        <div class="project-desc">
+            Připravovaný nástroj pro výpočet ceny, času a spotřeby filamentu.
+        </div>
+        <md-filled-button disabled>
+            Již brzy
+        </md-filled-button>
+    </md-card>
+
+    <!-- Projekt 3 – další nápady -->
+    <md-card>
+        <div class="project-title">✨ Další nápady</div>
+        <div class="project-desc">
+            Místo pro budoucí projekty, experimenty a nástroje.
+        </div>
+        <md-filled-button disabled>
+            Připravuje se
+        </md-filled-button>
+    </md-card>
+
+</div>
+
+<script>
+/* ------------------------------
+   Přepínač světlý/tmavý režim
+--------------------------------*/
+const themeToggle = document.getElementById("themeToggle");
+
+// Načtení uloženého režimu
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    themeToggle.textContent = savedTheme === "dark" ? "🌞" : "🌙";
+} else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+    themeToggle.textContent = prefersDark ? "🌞" : "🌙";
+}
+
+// Kliknutí na přepínač
+themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+
+    themeToggle.textContent = next === "dark" ? "🌞" : "🌙";
+});
+</script>
+
+</body>
+</html>
