@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Webcam Stream</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📷</text></svg>">
+    <!-- Material Symbols and Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <style>
+        html, body {
+            color-scheme: dark;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #444;
+            font-family: 'Roboto', Arial, sans-serif;
+            overflow: hidden;
+        }
+        .controls {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: #1a1a1a;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            padding: 8px 16px;
+            transition: opacity 0.2s, visibility 0.2s, box-shadow 0.2s;
+            min-height: 56px;
+        }
+        .controls.hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+        .player {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .player video {
+            height: 100vh;
+            width: auto;
+            max-width: 100vw;
+            display: block;
+            background: black;
+            border-radius: 12px;
+        }
+        .md3-btn, .md3-icon-btn {
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            outline: none;
+            border-radius: 28px;
+            height: 40px;
+            min-width: 40px;
+            padding: 0 24px;
+            margin: 0;
+            background: #2c2c2e;
+            color: #fff;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 
+                background 0.18s,
+                box-shadow 0.18s,
+                color 0.18s;
+            position: relative;
+            overflow: hidden;
+        }
+        .md3-btn:active, .md3-icon-btn:active {
+            background: #353535;
+        }
+        .md3-btn:focus-visible, .md3-icon-btn:focus-visible {
+            outline: 2px solid #b1b7c9;
+            outline-offset: 1px;
+        }
+        .md3-btn.muted {
+            background: #ba1a1a;
+            color: #fff;
+        }
+        .md3-btn.muted:active {
+            background: #a01313;
+        }
+        .md3-icon-btn {
+            padding: 0;
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            background: #212124;
+            border-radius: 20px;
+        }
+        .md3-icon-btn.fullscreen {
+            background: #222b35;
+            color: #cbdcff;
+        }
+        .md3-icon-btn.fullscreen.active {
+            background: #0146e0;
+            color: #fff;
+        }
+        .md3-icon-btn.hide {
+            background: #222124;
+            color: #cfcfcf;
+        }
+        .md3-icon-btn.hide.active {
+            background: #2e2e2e;
+            color: #fff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+            font-size: 24px;
+            line-height: 1;
+            user-select: none;
+            pointer-events: none;
+        }
+        #camera-select {
+            font-family: inherit;
+            font-size: 1rem;
+            border-radius: 12px;
+            border: 1.5px solid #3c3c43;
+            background: #232326;
+            color: #fff;
+            height: 40px;
+            padding: 0 36px 0 12px;
+            outline: none;
+            appearance: none;
+            min-width: 160px;
+            box-sizing: border-box;
+            transition: border-color 0.18s;
+        }
+        #camera-select:focus-visible {
+            border-color: #8ab4f8;
+        }
+        /* Custom dropdown arrow */
+        #camera-select {
+            background-image: url('data:image/svg+xml;utf8,<svg width="18" height="18" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M5 7l4 4 4-4" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 18px 18px;
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            .controls {
+                flex-direction: column;
+                gap: 7px;
+                padding: 8px 8px;
+                min-height: 0;
+            }
+            #camera-select {
+                min-width: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="controls" id="controls-bar">
+        <button id="hide-controls-btn" class="md3-icon-btn hide" type="button" title="Hide controls (H)">
+            <span id="hide-controls-icon" class="material-symbols-outlined" aria-label="Hide controls">visibility_off</span>
+        </button>
+        <select id="camera-select"></select>
+        <button id="mute-btn" class="md3-btn" type="button" title="Mute audio (M)">
+            <span id="mute-btn-icon" class="material-symbols-outlined" style="margin-right:8px;">mic</span>
+            <span id="mute-btn-label">Mute</span>
+        </button>
+        <button id="fullscreen-btn" class="md3-icon-btn fullscreen" type="button" title="Fullscreen (F)">
+            <span id="fullscreen-icon" class="material-symbols-outlined" aria-label="Fullscreen">fullscreen</span>
+        </button>
+    </div>
+    <div class="player" id="player">
+        <video id="webcam-stream" autoplay playsinline></video>
+    </div>
+    <script>
+        const webcamStream = document.getElementById("webcam-stream");
+        const cameraSelect = document.getElementById("camera-select");
+        const muteBtn = document.getElementById("mute-btn");
+        const muteBtnIcon = document.getElementById("mute-btn-icon");
+        const muteBtnLabel = document.getElementById("mute-btn-label");
+        const controlsBar = document.getElementById("controls-bar");
+        const hideControlsBtn = document.getElementById("hide-controls-btn");
+        const hideControlsIcon = document.getElementById("hide-controls-icon");
+        const fullscreenBtn = document.getElementById("fullscreen-btn");
+        const fullscreenIcon = document.getElementById("fullscreen-icon");
+        const player = document.getElementById("player");
+
+        let currentStream = null;
+        let audioMuted = false;
+        let controlsHidden = false;
+        let isFullscreen = false;
+
+        const constraints = {
+            audio: true,
+            video: {
+                width: { min: 1024, ideal: 1280, max: 1920 },
+                height: { min: 576, ideal: 720, max: 1080 },
+            }
+        };
+
+        function stopCurrentStream() {
+            if (currentStream) {
+                currentStream.getTracks().forEach(track => track.stop());
+                currentStream = null;
+            }
+        }
+
+        function getVideoStream(deviceId) {
+            const videoConstraints = { ...constraints.video };
+            if (deviceId) {
+                videoConstraints.deviceId = { exact: deviceId };
+            }
+            return navigator.mediaDevices.getUserMedia({
+                audio: constraints.audio,
+                video: videoConstraints
+            });
+        }
+
+        function populateCameraList(selectedDeviceId = null) {
+            navigator.mediaDevices.enumerateDevices()
+            .then(devices => {
+                const videoDevices = devices.filter(device => device.kind === "videoinput");
+                cameraSelect.innerHTML = "";
+                videoDevices.forEach((device, idx) => {
+                    const option = document.createElement("option");
+                    option.value = device.deviceId;
+                    option.text = device.label || `Camera ${idx + 1}`;
+                    cameraSelect.appendChild(option);
+                });
+                // Select preferred camera if not set
+                if (selectedDeviceId) {
+                    cameraSelect.value = selectedDeviceId;
+                } else {
+                    // Prefer USB camera if present
+                    let preferredDevice = videoDevices[0];
+                    for (const device of videoDevices) {
+                        if (/usb/i.test(device.label)) {
+                            preferredDevice = device;
+                            break;
+                        }
+                    }
+                    cameraSelect.value = preferredDevice.deviceId;
+                }
+            });
+        }
+
+        function updateMuteButtonUI() {
+            if (audioMuted) {
+                muteBtn.classList.add("muted");
+                muteBtnIcon.textContent = "mic_off";
+                muteBtnLabel.textContent = "Unmute";
+            } else {
+                muteBtn.classList.remove("muted");
+                muteBtnIcon.textContent = "mic";
+                muteBtnLabel.textContent = "Mute";
+            }
+        }
+
+        function setStreamAudioMuted(muted) {
+            if (currentStream) {
+                currentStream.getAudioTracks().forEach(track => {
+                    track.enabled = !muted;
+                });
+            }
+            audioMuted = muted;
+            updateMuteButtonUI();
+        }
+
+        function toggleMute() {
+            audioMuted = !audioMuted;
+            setStreamAudioMuted(audioMuted);
+        }
+
+        muteBtn.addEventListener("click", toggleMute);
+
+        function startCamera(deviceId) {
+            stopCurrentStream();
+            getVideoStream(deviceId)
+                .then(stream => {
+                    currentStream = stream;
+                    webcamStream.srcObject = stream;
+                    populateCameraList(deviceId);
+                    setStreamAudioMuted(audioMuted); // Maintain mute state on stream switch
+                })
+                .catch(error => {
+                    alert("Could not access webcam: " + error.message);
+                    console.error(error);
+                });
+        }
+
+        cameraSelect.addEventListener("change", () => {
+            startCamera(cameraSelect.value);
+        });
+
+        // HIDE/SHOW CONTROLS LOGIC
+
+        function setControlsHidden(hidden) {
+            controlsHidden = hidden;
+            if (controlsHidden) {
+                controlsBar.classList.add('hidden');
+                hideControlsIcon.textContent = 'visibility';
+                hideControlsBtn.title = "Show controls (H)";
+                hideControlsBtn.classList.add('active');
+            } else {
+                controlsBar.classList.remove('hidden');
+                hideControlsIcon.textContent = 'visibility_off';
+                hideControlsBtn.title = "Hide controls (H)";
+                hideControlsBtn.classList.remove('active');
+            }
+        }
+
+        hideControlsBtn.addEventListener("click", () => {
+            setControlsHidden(!controlsHidden);
+        });
+
+        // FULLSCREEN LOGIC
+
+        function setFullscreen(full) {
+            isFullscreen = full;
+            if (isFullscreen) {
+                if (player.requestFullscreen) {
+                    player.requestFullscreen();
+                } else if (player.webkitRequestFullscreen) {
+                    player.webkitRequestFullscreen();
+                } else if (player.msRequestFullscreen) {
+                    player.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+            updateFullscreenButtonUI();
+        }
+
+        function updateFullscreenButtonUI() {
+            if (isFullscreen) {
+                fullscreenBtn.classList.add("active");
+                fullscreenIcon.textContent = "fullscreen_exit";
+                fullscreenBtn.title = "Exit fullscreen (F)";
+            } else {
+                fullscreenBtn.classList.remove("active");
+                fullscreenIcon.textContent = "fullscreen";
+                fullscreenBtn.title = "Fullscreen (F)";
+            }
+        }
+
+        fullscreenBtn.addEventListener("click", () => {
+            setFullscreen(!isFullscreen);
+        });
+
+        // Watch for fullscreen changes (so exiting with ESC updates button)
+        document.addEventListener('fullscreenchange', () => {
+            isFullscreen = !!document.fullscreenElement;
+            updateFullscreenButtonUI();
+        });
+        document.addEventListener('webkitfullscreenchange', () => {
+            isFullscreen = !!document.webkitFullscreenElement;
+            updateFullscreenButtonUI();
+        });
+        document.addEventListener('msfullscreenchange', () => {
+            isFullscreen = !!document.msFullscreenElement;
+            updateFullscreenButtonUI();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            // Ignore if focus is in an input/select/textarea or with modifier keys
+            if (
+                e.altKey || e.ctrlKey || e.metaKey || e.shiftKey ||
+                ['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)
+            ) return;
+            if (e.key === 'h' || e.key === 'H') {
+                setControlsHidden(!controlsHidden);
+                e.preventDefault();
+            }
+            if (e.key === 'm' || e.key === 'M') {
+                toggleMute();
+                e.preventDefault();
+            }
+            if (e.key === 'f' || e.key === 'F') {
+                setFullscreen(!isFullscreen);
+                e.preventDefault();
+            }
+        });
+
+        // Initial camera setup after permission
+        function init() {
+            getVideoStream()
+            .then(stream => {
+                currentStream = stream;
+                webcamStream.srcObject = stream;
+                setStreamAudioMuted(audioMuted);
+                return navigator.mediaDevices.enumerateDevices();
+            })
+            .then(devices => {
+                const videoDevices = devices.filter(device => device.kind === "videoinput");
+                populateCameraList();
+                // Prefer USB camera if present
+                let preferredDevice = videoDevices[0];
+                for (const device of videoDevices) {
+                    if (/usb/i.test(device.label)) {
+                        preferredDevice = device;
+                        break;
+                    }
+                }
+                // If not already using preferred device, switch
+                if (preferredDevice && preferredDevice.deviceId !== currentStream.getVideoTracks()[0].getSettings().deviceId) {
+                    startCamera(preferredDevice.deviceId);
+                }
+            })
+            .catch(error => {
+                alert("Could not access webcam: " + error.message);
+                console.error(error);
+            });
+        }
+
+        if (
+            navigator.mediaDevices &&
+            navigator.mediaDevices.getUserMedia &&
+            navigator.mediaDevices.enumerateDevices
+        ) {
+            updateMuteButtonUI();
+            setControlsHidden(false);
+            updateFullscreenButtonUI();
+            init();
+        } else {
+            alert("Your browser does not support required Media Devices APIs.");
+        }
+    </script>
+</body>
+</html>
