@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univerzální Tierlist Generátor</title>
+    <style>
+        :root {
+            --theme-color: #6200ee;
+        }
+
+        /* Světlý režim */
+        :root[data-theme="light"] {
+            --bg: #f3f3f3;
+            --text: #000;
+            --card-bg: #fff;
+            --outline: #444444;
+            --placeholder: #757575;
+            --row-bg: rgba(0, 0, 0, 0.04);
+        }
+
+        /* Tmavý režim */
+        :root[data-theme="dark"] {
+            --bg: #121212;
+            --text: #fff;
+            --card-bg: #1e1e1e;
+            --outline: #bbbbbb;
+            --placeholder: #888888;
+            --row-bg: rgba(255, 255, 255, 0.04);
+        }
+
+        body {
+            font-family: Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .title-input-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #title {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid var(--theme-color);
+            color: var(--text);
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            outline: none;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+        #title::placeholder { color: var(--placeholder); }
+
+        .tier-row {
+            display: flex;
+            align-items: center;
+            background-color: var(--row-bg);
+            margin-bottom: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+            min-height: 56px;
+            border: 1px solid var(--outline);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .tier-label {
+            width: 70px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: #000;
+            align-self: stretch;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Tradiční barvy pro tierlist */
+        .tier-S { background-color: #ff7f7f; }
+        .tier-A { background-color: #ffbf7f; }
+        .tier-B { background-color: #ffdf7f; }
+        .tier-C { background-color: #ffff7f; }
+        .tier-D { background-color: #bfff7f; }
+        .tier-F { background-color: #7fff7f; }
+        
+        .tier-content {
+            padding: 0 12px;
+            flex-grow: 1;
+        }
+
+        input[type="text"].tier-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            font-size: 16px;
+            outline: none;
+            height: 40px;
+            transition: color 0.3s;
+        }
+        input[type="text"].tier-input::placeholder { color: var(--placeholder); }
+
+        .controls {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        /* Vzhled tlačítka odpovídající md-filled-button */
+        button {
+            background-color: var(--theme-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background-color 0.2s, opacity 0.2s;
+            width: 100%;
+        }
+        button:hover { opacity: 0.9; }
+
+        .share-box {
+            margin-top: 20px;
+            display: none;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            word-break: break-all;
+            border-left: 6px solid var(--theme-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+
+        /* Přepínač režimu */
+        .theme-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 26px;
+            user-select: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Přepínač režimu -->
+    <div class="theme-toggle" id="themeToggle">🌙</div>
+
+    <div class="container">
+        <div class="title-input-container">
+            <input type="text" id="title" placeholder="Klikni sem a napiš název tierlistu...">
+        </div>
+
+        <div id="tierlist">
+            <div class="tier-row"><div class="tier-label tier-S">S</div><div class="tier-content"><input type="text" id="s" class="tier-input" placeholder="Položky oddělené čárkou..."></div></div>
+            <div class="tier-row"><div class="tier-label tier-A">A</div><div class="tier-content"><input type="text" id="a" class="tier-input" placeholder="Položky oddělené čárkou..."></div></div>
+            <div class="tier-row"><div class="tier-label tier-B">B</div><div class="tier-content"><input type="text" id="b" class="tier-input" placeholder="Položky oddělené čárkou..."></div></div>
+            <div class="tier-row"><div class="tier-label tier-C">C</div><div class="tier-content"><input type="text" id="c" class="tier-input" placeholder="Položky oddělené čárkou..."></div></div>
+            <div class="tier-row"><div class="tier-label tier-D">D</div><div class="tier-content"><input type="text" id="d" class="tier-input" placeholder="Položky oddělené čárkou..."></div></div>
+            <div class="tier-row"><div class="tier-label tier-F">F</div><div class="tier-content"><input type="text" id="f" class="tier-input" placeholder="Položky oddělené čárkou..."></div></div>
+        </div>
+
+        <div class="controls">
+            <button onclick="generateLink()">🔗 Vygenerovat odkaz pro sdílení</button>
+            <div class="share-box" id="shareBox">
+                <strong>Odkaz pro sdílení:</strong><br><br>
+                <a id="shareLink" href="#" style="color: var(--theme-color);" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Načtení dat z URL při otevření stránky
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Načtení vlastního názvu tierlistu
+            if (urlParams.has('title')) {
+                document.getElementById('title').value = decodeURIComponent(urlParams.get('title'));
+                document.title = decodeURIComponent(urlParams.get('title')) + " - Tierlist";
+            }
+            
+            // Načtení jednotlivých řádků
+            const tiers = ['s', 'a', 'b', 'c', 'd', 'f'];
+            tiers.forEach(tier => {
+                if (urlParams.has(tier)) {
+                    document.getElementById(tier).value = decodeURIComponent(urlParams.get(tier));
+                }
+            });
+        };
+
+        // Vygenerování nové URL se všemi daty
+        function generateLink() {
+            const params = new URLSearchParams();
+            
+            // Uložení názvu tierlistu
+            const titleVal = document.getElementById('title').value.trim();
+            if (titleVal) {
+                params.append('title', titleVal);
+            }
+
+            // Uložení obsahu tierů
+            const tiers = ['s', 'a', 'b', 'c', 'd', 'f'];
+            tiers.forEach(tier => {
+                const val = document.getElementById(tier).value.trim();
+                if (val) {
+                    params.append(tier, val);
+                }
+            });
+
+            // Sestavení výsledného odkazu
+            const shareUrl = window.location.origin + window.location.pathname + '?' + params.toString();
+            
+            const shareBox = document.getElementById('shareBox');
+            const shareLink = document.getElementById('shareLink');
+            
+            shareLink.href = shareUrl;
+            shareLink.innerText = shareUrl;
+            shareBox.style.display = 'block';
+        }
+
+        // --- PŘEPÍNAČ SVĚTLÝ/TMAVÝ REŽIM ---
+        const themeToggle = document.getElementById("themeToggle");
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+            themeToggle.textContent = savedTheme === "dark" ? "🌞" : "🌙";
+        } else {
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+            themeToggle.textContent = prefersDark ? "🌞" : "🌙";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            const current = document.documentElement.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+
+            themeToggle.textContent = next === "dark" ? "🌞" : "🌙";
+        });
+    </script>
+</body>
+</html>
