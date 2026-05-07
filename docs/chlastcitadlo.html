@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍺 TeamBuilding Počítadlo</title>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 16px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .person {
+      background: white;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .person input {
+      width: 100%;
+      font-size: 16px;
+      padding: 6px;
+      margin-bottom: 8px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    .count {
+      font-size: 18px;
+      font-weight: bold;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    .times {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .add-person {
+      width: 100%;
+      font-size: 18px;
+      padding: 10px;
+      margin-top: 12px;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🍺 TeamBuilding Počítadlo</h1>
+
+<div id="people"></div>
+
+<button class="add-person" onclick="addPerson()">➕ Přidat osobu</button>
+
+<footer>
+  Data jsou uložena pouze v URL – ideální pro GitHub Pages
+</footer>
+
+<script>
+/* =========================
+   STAV A SERIALIZACE
+========================= */
+
+let state = loadState();
+
+function saveState() {
+  const json = JSON.stringify(state);
+  const b64 = btoa(unescape(encodeURIComponent(json)));
+  location.hash = b64;
+}
+
+function loadState() {
+  if (!location.hash) return { p: [] };
+
+  try {
+    const b64 = location.hash.substring(1);
+    const json = decodeURIComponent(escape(atob(b64)));
+    return JSON.parse(json);
+  } catch {
+    return { p: [] };
+  }
+}
+
+/* =========================
+   UI LOGIKA
+========================= */
+
+function render() {
+  const root = document.getElementById("people");
+  root.innerHTML = "";
+
+  state.p.forEach((person, index) => {
+    const div = document.createElement("div");
+    div.className = "person";
+
+    div.innerHTML = `
+      <input
+        placeholder="Jméno"
+        value="${person.n}"
+        onchange="updateName(${index}, this.value)"
+      />
+
+      <div class="controls">
+        <button onclick="removeBeer(${index})">−</button>
+        <div class="count">${person.b.length} 🍺</div>
+        <button onclick="addBeer(${index})">+</button>
+      </div>
+
+      <div class="times">
+        ${person.b.join(", ")}
+      </div>
+    `;
+
+    root.appendChild(div);
+  });
+
+  saveState();
+}
+
+function addPerson() {
+  state.p.push({ n: "", b: [] });
+  render();
+}
+
+function updateName(i, value) {
+  state.p[i].n = value;
+  render();
+}
+
+function addBeer(i) {
+  const time = new Date().toLocaleTimeString("cs-CZ", {
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+  state.p[i].b.push(time);
+  render();
+}
+
+function removeBeer(i) {
+  if (state.p[i].b.length > 0) {
+    state.p[i].b.pop();
+    render();
+  }
+}
+
+/* =========================
+   START
+========================= */
+
+render();
+</script>
+
+</body>
+</html>
