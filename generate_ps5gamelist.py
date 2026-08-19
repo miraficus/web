@@ -20,13 +20,22 @@ ssl_context.check_hostname = False
 ssl_context.verify_mode = ssl.CERT_NONE
 
 def parse_system_ver(system_ver_str):
-    """Převede desítkové číslo Sony na formátovaný FW (např. 100794368 -> 06.02)"""
+    """Převede číslování Sony na reálnou verzi PS5 FW"""
     try:
         val = int(system_ver_str)
-        hex_val = f"{val:08x}"  # Převod na 8-místný hex
-        major = int(hex_val[0:2], 16)
-        minor = int(hex_val[2:4], 16)
-        return f"{major:02d}.{minor:02d}", float(f"{major}.{minor}")
+        
+        # Převod na 32-bit hex (např. 0x01000000 -> 01.00, 0x06020000 -> 06.02)
+        major = (val >> 24) & 0xFF
+        minor = (val >> 16) & 0xFF
+
+        # Pokud je major větší než aktuální existující FW na PS5 (např. SDK 19.xx), 
+        # jedná se o launch tituly vyžadující pouze základní systém 01.00
+        if major > 13 or major == 0:
+            return "01.00", 1.0
+
+        formatted_str = f"{major:02d}.{minor:02d}"
+        formatted_float = float(f"{major}.{minor}")
+        return formatted_str, formatted_float
     except Exception as e:
         print(f"   [!] Chyba při převodu čísla system_ver '{system_ver_str}': {e}")
         return None, None
