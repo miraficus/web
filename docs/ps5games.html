@@ -296,16 +296,16 @@ function renderGames() {
     filteredGames.forEach(game => {
         const tr = document.createElement("tr");
         
-        tr.innerHTML = `
-            <td><span class="ppsa-code">${game.ppsa}</span></td>
-            <td><strong>${game.title}</strong></td>
-            <td><span class="fw-badge">v${game.fwDisplay || game.minFw.toFixed(2)}</span></td>
-            <td>
-                <md-filled-button class="buy-btn" data-title="${game.title.replace(/"/g, '&quot;')}">
-                    Koupit
-                </md-filled-button>
-            </td>
-        `;
+    tr.innerHTML = `
+        <td><span class="ppsa-code">${game.ppsa}</span></td>
+        <td><strong>${game.title}</strong></td>
+        <td><span class="fw-badge">${game.fwDisplay.includes('➔') ? game.fwDisplay : 'v' + game.fwDisplay}</span></td>
+        <td>
+            <md-filled-button class="buy-btn" data-title="${game.title.replace(/"/g, '&quot;')}">
+                Koupit
+            </md-filled-button>
+        </td>
+    `;
         tbody.appendChild(tr);
     });
 
