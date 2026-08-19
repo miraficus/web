@@ -21,7 +21,7 @@ jobs:
         python-version: '3.x'
 
     - name: Spuštění generátoru
-      run: python generate_games.py
+      run: python generate_ps5gamelist.py
 
     - name: Vytvoření Pull Requestu
       uses: peter-evans/create-pull-request@v6
