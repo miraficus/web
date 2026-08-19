@@ -4,6 +4,7 @@ import re
 import json
 import xml.etree.ElementTree as ET
 import sys
+import ssl  # <--- Přidán import ssl
 
 TSV_URL = "https://raw.githubusercontent.com/1jtp8sobiu/ps5-pkg/master/PS5_XML.tsv"
 
@@ -12,6 +13,11 @@ HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language': 'en-US,en;q=0.5'
 }
+
+# Vytvoření SSL kontextu, který ignoruje chyby neplatných nebo neověřených certifikátů
+ssl_context = ssl.create_default_context()
+ssl_context.check_hostname = False
+ssl_context.verify_mode = ssl.CERT_NONE
 
 def parse_system_ver(system_ver_str):
     """Převede desítkové číslo Sony na formátovaný FW (např. 100794368 -> 06.02)"""
@@ -26,11 +32,12 @@ def parse_system_ver(system_ver_str):
         return None, None
 
 def fetch_xml_sys_ver(url):
-    """Stáhne XML a pokusí se vytáhnout system_ver + loguje podrobnosti"""
+    """Stáhne XML a pokusí se vytáhnout system_ver"""
     req = urllib.request.Request(url, headers=HEADERS)
     
     try:
-        with urllib.request.urlopen(req, timeout=8) as response:
+        # Předáváme ssl_context s vypnutým ověřováním
+        with urllib.request.urlopen(req, timeout=8, context=ssl_context) as response:
             xml_text = response.read().decode('utf-8', errors='ignore')
             
             if not xml_text.strip():
@@ -69,7 +76,7 @@ def main():
     req = urllib.request.Request(TSV_URL, headers=HEADERS)
     
     try:
-        with urllib.request.urlopen(req, timeout=15) as response:
+        with urllib.request.urlopen(req, timeout=15, context=ssl_context) as response:
             lines = response.read().decode('utf-8').splitlines()
     except Exception as e:
         print(f"Kritická chyba při stahování TSV: {e}")
@@ -124,7 +131,7 @@ def main():
     games_list = list(games_dict.values())
     games_list.sort(key=lambda x: x['title'])
 
-    output_path = "ps5gamelist.json"
+    output_path = "docs/ps5gamelist.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(games_list, f, ensure_ascii=False, indent=2)
 
