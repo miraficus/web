@@ -71,35 +71,46 @@ def fetch_xml_all_versions(url):
     return raw_versions
 
 def is_dlc_or_addon(entitlement_id, title_name):
-    """Přísná detekce DLC/doplňků podle entitlement_id i podle názvu"""
+    """Přísná detekce DLC, bonusů, skinů a doplňků"""
     ent_upper = entitlement_id.upper()
     title_lower = title_name.lower()
 
-    # 1. Kontrola podle entitlement_id (první sloupec CSV)
-    # Reálné hry mají většinou na konci 'GAME00', 'BASEGAME', 'APPLICATION' apod.
-    dlc_ent_keywords = [
+    # 1. Kontrola podle Entitlement ID (Kódy od Sony)
+    ent_keywords = [
         'DLC', 'SKIN', 'PACK', 'COSTUME', 'PASS', 'SOUNDTRACK', 'BGM',
-        'VEHICLE', 'CONTENT', 'BONUS', 'COIN', 'POINTS', 'EXPANSION', 'ITEMS'
+        'VEHICLE', 'CONTENT', 'BONUS', 'COIN', 'POINTS', 'EXPANSION', 
+        'ITEM', 'PREORDER', 'REWARD', 'WEAPON', 'OUTFIT', 'AVATAR',
+        'THEME', 'SUIT', 'ARMOR', 'CHARM', 'STORY', 'AHELP', 'DELUXE'
     ]
-    for kw in dlc_ent_keywords:
+    for kw in ent_keywords:
         if kw in ent_upper:
-            # Výjimka pokud by slovo bylo součástí slova GAME (např. GAMEPACK - raději odfiltrujeme)
-            return True
+            # Ujistíme se, že kód nekončí přímo jako plná aplikace/hra (např. GAME00 / BASEGAME)
+            if not (ent_upper.endswith('GAME00000') or 'BASEGAME' in ent_upper):
+                return True
 
-    # 2. Kontrola podle názvu hry
-    dlc_title_keywords = [
+    # 2. Kontrola podle názvu (Title)
+    title_keywords = [
         'skin', 'costume', 'add-on', 'addon', 'expansion', 'season pass', 
-        'deluxe edition pack', 'pre-order bonus', 'coin', 'points', 
-        'dlc', 'bonus pack', 'item', 'bundle pack', 'soundtrack', 
-        'vehicle', 'drone', 'car pack', 'train', 'content', 'swap'
+        'deluxe edition pack', 'pre-order', 'preorder', 'reward', 'bonus', 
+        'coin', 'points', 'dlc', 'bonus pack', 'item', 'bundle pack', 
+        'soundtrack', 'vehicle', 'drone', 'car pack', 'train', 'content', 
+        'swap', 'weapon', 'outfit', 'armor', 'charm', 'suite', 'steak', 
+        'pacote', 'fortalecimento', 'ajuda', 'story expansion', 'character',
+        'digital deluxe', 'deluxe content'
     ]
-    if any(kw in title_lower for kw in dlc_title_keywords):
+    if any(kw in title_lower for kw in title_keywords):
         return True
+
+    # 3. Detekce asijských znaků typických pro speciální DLC edice
+    if re.search(r'[\u4e00-\u9fff\u3040-\u30ff]', title_name):
+        # Pokud název obsahuje např. <數位豪華版限定> (Digital Deluxe Bonus)
+        if any(c in title_name for c in ['限定', '特典', '豪華', 'パック', '衣装']):
+            return True
 
     return False
 
 def main():
-    games_dict = {}
+    games_dict = {}  # ppsa -> { title: str, is_clean_game: bool, xml_urls: set() }
 
     # ----------------------------------------------------
     # KROK 1: Načtení dat z lokálního CSV souboru
@@ -109,7 +120,6 @@ def main():
     if os.path.exists(LOCAL_CSV_PATH):
         try:
             with open(LOCAL_CSV_PATH, 'r', encoding='utf-8', errors='ignore') as f:
-                # Načteme řádky s ošetřením, že první nepojmenovaný sloupec je entitlement_id
                 reader = csv.reader(f)
                 header = next(reader, None)
 
@@ -132,32 +142,32 @@ def main():
                         continue
 
                     ppsa = ppsa_match.group(1)
+                    is_dlc = is_dlc_or_addon(entitlement_id, title_name)
 
-                    # Kontrola, zda se jedná o DLC nebo doplněk
-                    if is_dlc_or_addon(entitlement_id, title_name):
+                    if is_dlc:
                         filtered_dlc_count += 1
-                        # Pokud už ale tento PPSA máme v databázi, uložíme si aspoň XML url pro určení FW
-                        if ppsa in games_dict and package_url.startswith('http'):
-                            games_dict[ppsa]["xml_urls"].add(package_url)
-                        continue
 
-                    # Pokud se jedná o plnou hru:
+                    # Pokud PPSA ještě v databázi nemáme:
                     if ppsa not in games_dict:
                         games_dict[ppsa] = {
-                            "title": title_name if title_name else ppsa,
+                            "title": title_name if not is_dlc else ppsa,
+                            "is_clean_game": not is_dlc,
                             "xml_urls": set()
                         }
                     else:
-                        # Pokud již máme název (např. z kratšího záznamu), ponecháme čistý název hry
-                        if len(title_name) > 0 and len(games_dict[ppsa]["title"]) == 9: # pokud tam bylo jen PPSA
+                        # Pokud už PPSA v databázi máme, ale byl tam název z DLC (nebo jen PPSA), 
+                        # a teď přišel čistý název hry, nahradíme ho!
+                        if not games_dict[ppsa]["is_clean_game"] and not is_dlc:
                             games_dict[ppsa]["title"] = title_name
+                            games_dict[ppsa]["is_clean_game"] = True
 
+                    # Odkazy na XML sbíráme vždy pro nejpřesnější FW
                     if package_url.startswith('http'):
                         games_dict[ppsa]["xml_urls"].add(package_url)
 
             print(f"   [OK] Přečteno {rows_count} řádků z {LOCAL_CSV_PATH}.")
             print(f"   [OK] Odfiltrováno {filtered_dlc_count} DLC/doplňků.")
-            print(f"   [OK] Zachováno {len(games_dict)} unikátních plných PS5 her.")
+            print(f"   [OK] Zachováno {len(games_dict)} unikátních PS5 her.")
 
         except Exception as e:
             print(f"   [!] Chyba při čtení souboru {LOCAL_CSV_PATH}: {e}")
@@ -184,8 +194,7 @@ def main():
                 content_id, title_name = parts[0].strip(), parts[1].strip()
                 version_url = parts[2].strip() if len(parts) > 2 else ""
 
-                if is_dlc_or_addon(content_id, title_name):
-                    continue
+                is_dlc = is_dlc_or_addon(content_id, title_name)
 
                 ppsa_match = re.search(r'(PPSA\d{5})', content_id)
                 if not ppsa_match:
@@ -194,15 +203,22 @@ def main():
                 ppsa = ppsa_match.group(1)
 
                 if ppsa in games_dict:
+                    # Pokud v databázi nemáme čistý název a z GitHubu přišel název plné hry:
+                    if not games_dict[ppsa]["is_clean_game"] and not is_dlc:
+                        games_dict[ppsa]["title"] = title_name
+                        games_dict[ppsa]["is_clean_game"] = True
+
                     if version_url.startswith('http'):
                         games_dict[ppsa]["xml_urls"].add(version_url)
                         enriched_existing += 1
                 else:
-                    games_dict[ppsa] = {
-                        "title": title_name,
-                        "xml_urls": {version_url} if version_url.startswith('http') else set()
-                    }
-                    added_new += 1
+                    if not is_dlc:
+                        games_dict[ppsa] = {
+                            "title": title_name,
+                            "is_clean_game": True,
+                            "xml_urls": {version_url} if version_url.startswith('http') else set()
+                        }
+                        added_new += 1
 
             print(f"   Doplněno {enriched_existing} odkazů k existujícím hrám, přidáno {added_new} nových her z GitHubu.")
 
@@ -214,9 +230,12 @@ def main():
     # ----------------------------------------------------
     print("3. Stahuji verze z XML a sestavuji výsledný JSON...")
     games_list = []
-    total_games = len(games_dict)
+    
+    # Vyfiltrujemy pouze ty PPSA, které mají platný čistý název hry (vyřadí sirotčí DLC)
+    valid_games = {k: v for k, v in games_dict.items() if v["is_clean_game"]}
+    total_games = len(valid_games)
 
-    for idx, (ppsa, data) in enumerate(games_dict.items(), start=1):
+    for idx, (ppsa, data) in enumerate(valid_games.items(), start=1):
         parsed_vers = []
 
         for url in data["xml_urls"]:
@@ -260,7 +279,7 @@ def main():
         json.dump(games_list, f, ensure_ascii=False, indent=2)
 
     print("--------------------------------------------------")
-    print(f"HOTOVO! Celkem vygenerováno {len(games_list)} unikátních plných her do {output_path}.")
+    print(f"HOTOVO! Celkem vygenerováno {len(games_list)} čistých PS5 her do {output_path}.")
 
 if __name__ == "__main__":
     main()
