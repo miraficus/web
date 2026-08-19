@@ -92,46 +92,65 @@ def main():
     req_garlic = urllib.request.Request(GARLICSAVES_CSV_URL, headers=HEADERS)
     try:
         with urllib.request.urlopen(req_garlic, timeout=20, context=ssl_context) as response:
+            status_code = response.getcode()
+            content_type_header = response.headers.get('Content-Type', '')
             csv_content = response.read().decode('utf-8', errors='ignore')
-            
-            reader = csv.DictReader(io.StringIO(csv_content))
-            for row in reader:
-                title_name = row.get('title', '').strip()
-                title_id = row.get('title_id', '').strip()
-                package_url = row.get('package_url', '').strip()
-                content_type = row.get('content_type', '').strip().lower()
 
-                # Vytáhnutí PPSA ID z kódu
-                ppsa_match = re.search(r'(PPSA\d{5})', title_id)
-                if not ppsa_match:
-                    continue
+            print(f"   [LOG] GarlicSaves HTTP Status: {status_code}")
+            print(f"   [LOG] GarlicSaves Content-Type: {content_type_header}")
+            print(f"   [LOG] Náhled odpovědi (prvních 200 znaků):\n   {repr(csv_content[:200])}")
 
-                ppsa = ppsa_match.group(1)
+            # Kontrola, zda server nevrátil HTML přihlašovací stránku
+            if "<html" in csv_content.lower() or "<!doctype html" in csv_content.lower():
+                print("   [!] CHYBA: GarlicSaves vrátil HTML stránku místo CSV! Je vyžadováno přihlášení nebo cookies.")
+            else:
+                reader = csv.DictReader(io.StringIO(csv_content))
                 
-                # Zjištění, zda jde o plnou hru nebo DLC
-                is_full_game = (content_type == 'game') and not is_likely_dlc_title(title_name)
-
-                # Kontrola duplicit podle PPSA ID
-                if ppsa not in games_dict:
-                    games_dict[ppsa] = {
-                        "title": title_name if title_name else ppsa,
-                        "is_game_type": is_full_game,
-                        "xml_urls": set()
-                    }
+                # Zlogujeme nalezené názvy sloupců
+                if reader.fieldnames:
+                    print(f"   [LOG] Nalezené sloupce v CSV: {reader.fieldnames}")
                 else:
-                    # Pokud už záznam máme z DLC a teď přišel řádek s plnou hrou, nahradíme název
-                    if not games_dict[ppsa]["is_game_type"] and is_full_game:
-                        games_dict[ppsa]["title"] = title_name
-                        games_dict[ppsa]["is_game_type"] = True
+                    print("   [!] VAROVÁNÍ: CSV neobsahuje žádné sloupce (hlavičku).")
 
-                # Odkaz na XML přidáme vždy (slouží pro zjištění verzí)
-                if package_url.startswith('http'):
-                    games_dict[ppsa]["xml_urls"].add(package_url)
+                rows_count = 0
+                for row in reader:
+                    rows_count += 1
+                    title_name = row.get('title', '').strip()
+                    title_id = row.get('title_id', '').strip()
+                    package_url = row.get('package_url', '').strip()
+                    content_type = row.get('content_type', '').strip().lower()
+
+                    ppsa_match = re.search(r'(PPSA\d{5})', title_id)
+                    if not ppsa_match:
+                        continue
+
+                    ppsa = ppsa_match.group(1)
+                    is_full_game = (content_type == 'game') and not is_likely_dlc_title(title_name)
+
+                    if ppsa not in games_dict:
+                        games_dict[ppsa] = {
+                            "title": title_name if title_name else ppsa,
+                            "is_game_type": is_full_game,
+                            "xml_urls": set()
+                        }
+                    else:
+                        if not games_dict[ppsa]["is_game_type"] and is_full_game:
+                            games_dict[ppsa]["title"] = title_name
+                            games_dict[ppsa]["is_game_type"] = True
+
+                    if package_url.startswith('http'):
+                        games_dict[ppsa]["xml_urls"].add(package_url)
+
+                print(f"   [LOG] Přečteno řádků z CSV: {rows_count}")
 
         print(f"   Načteno a sloučeno {len(games_dict)} unikátních PS5 her/PPSA z GarlicSaves.")
 
+    except urllib.error.HTTPError as e:
+        print(f"   [!] HTTP chyba při stahování GarlicSaves: {e.code} - {e.reason}")
+    except urllib.error.URLError as e:
+        print(f"   [!] URL chyba při stahování GarlicSaves: {e.reason}")
     except Exception as e:
-        print(f"   [!] Chyba při stahování/čtení GarlicSaves CSV: {e}")
+        print(f"   [!] Neočekávaná chyba při stahování GarlicSaves: {e}")
 
     # ----------------------------------------------------
     # KROK 2: Doplnění dat z GitHub TSV (Záložní zdroj)
