@@ -4,7 +4,8 @@ import re
 import json
 import xml.etree.ElementTree as ET
 import sys
-import ssl  # <--- Přidán import ssl
+import ssl
+import os
 
 TSV_URL = "https://raw.githubusercontent.com/1jtp8sobiu/ps5-pkg/master/PS5_XML.tsv"
 
@@ -14,7 +15,6 @@ HEADERS = {
     'Accept-Language': 'en-US,en;q=0.5'
 }
 
-# Vytvoření SSL kontextu, který ignoruje chyby neplatných nebo neověřených certifikátů
 ssl_context = ssl.create_default_context()
 ssl_context.check_hostname = False
 ssl_context.verify_mode = ssl.CERT_NONE
@@ -23,62 +23,48 @@ def parse_system_ver(system_ver_str):
     """Převede číslování Sony na reálnou verzi PS5 FW"""
     try:
         val = int(system_ver_str)
-        
-        # Převod na 32-bit hex (např. 0x01000000 -> 01.00, 0x06020000 -> 06.02)
         major = (val >> 24) & 0xFF
         minor = (val >> 16) & 0xFF
 
-        # Pokud je major větší než aktuální existující FW na PS5 (např. SDK 19.xx), 
-        # jedná se o launch tituly vyžadující pouze základní systém 01.00
         if major > 13 or major == 0:
             return "01.00", 1.0
 
         formatted_str = f"{major:02d}.{minor:02d}"
         formatted_float = float(f"{major}.{minor}")
         return formatted_str, formatted_float
-    except Exception as e:
-        print(f"   [!] Chyba při převodu čísla system_ver '{system_ver_str}': {e}")
+    except Exception:
         return None, None
 
-def fetch_xml_sys_ver(url):
-    """Stáhne XML a pokusí se vytáhnout system_ver"""
+def fetch_xml_all_versions(url):
+    """Projede XML a vrátí seznam všech nalezených verzí FW pro danou hru"""
     req = urllib.request.Request(url, headers=HEADERS)
+    raw_versions = []
     
     try:
-        # Předáváme ssl_context s vypnutým ověřováním
         with urllib.request.urlopen(req, timeout=8, context=ssl_context) as response:
             xml_text = response.read().decode('utf-8', errors='ignore')
             
             if not xml_text.strip():
-                print(f"   [!] XML odpoveď byla prázdná.")
-                return None
+                return []
 
-            # 1. Pokus přes ElementTree
+            # 1. Hledání všech atributů system_ver v XML přes ElementTree
             try:
                 root = ET.fromstring(xml_text)
                 for pkg in root.findall('.//package'):
                     if 'system_ver' in pkg.attrib:
-                        return pkg.attrib['system_ver']
-                print(f"   [!] Element <package> s atributem system_ver nebyl v XML nalezen.")
-            except Exception as xml_err:
-                print(f"   [!] ElementTree selhal při parsování XML: {xml_err}")
+                        raw_versions.append(pkg.attrib['system_ver'])
+            except Exception:
+                pass
 
-            # 2. Záložní pokus přes Regex
-            match = re.search(r'system_ver=["\'](\d+)["\']', xml_text)
-            if match:
-                print(f"   [i] Našel se system_ver pomocí Regexu!")
-                return match.group(1)
-            else:
-                print(f"   [!] Regex nenašel 'system_ver' v textu XML.")
+            # 2. Záložní Regex pro odchycení všech výskytů
+            if not raw_versions:
+                matches = re.findall(r'system_ver=["\'](\d+)["\']', xml_text)
+                raw_versions.extend(matches)
 
-    except urllib.error.HTTPError as e:
-        print(f"   [!] HTTP Chyba {e.code}: {e.reason}")
-    except urllib.error.URLError as e:
-        print(f"   [!] URL Chyba (spojení selhalo): {e.reason}")
     except Exception as e:
-        print(f"   [!] Neočekávaná chyba při stahování XML: {e}")
+        print(f"   [!] Chyba při stahování XML: {e}")
 
-    return None
+    return raw_versions
 
 def main():
     print("Stahuji TSV soubor...")
@@ -93,7 +79,7 @@ def main():
 
     games_dict = {}
     print(f"Celkem řádků v TSV: {len(lines)}")
-    print("Zpracovávám položky...\n" + "="*50)
+    print("Zpracovávám položky...")
 
     for line in lines[1:]:
         parts = line.split('\t')
@@ -108,44 +94,52 @@ def main():
             continue
             
         ppsa = ppsa_match.group(1)
-        
         if ppsa in games_dict:
             continue
 
-        print(f"\nZpracovávám: {ppsa} | {title_name}")
-        print(f"   URL z TSV: '{version_url}'")
-
-        fw_display = "Neznámá"
         min_fw_float = 0.0
+        fw_display = "Neznámá"
 
         if version_url.startswith('http'):
-            sys_ver_raw = fetch_xml_sys_ver(version_url)
-            if sys_ver_raw:
-                formatted_str, formatted_float = parse_system_ver(sys_ver_raw)
-                if formatted_str:
-                    fw_display = formatted_str
-                    min_fw_float = formatted_float
-                    print(f"   [SUCCESS] FW Nalezen: {fw_display}")
-        else:
-            print(f"   [!] Neplatná URL adresa (nezačíná na http).")
+            raw_vers = fetch_xml_all_versions(version_url)
+            parsed_vers = []
+
+            for rv in raw_vers:
+                f_str, f_num = parse_system_ver(rv)
+                if f_str and f_num:
+                    parsed_vers.append((f_num, f_str))
+
+            if parsed_vers:
+                # Seřadíme verze od nejnižší po nejvyšší
+                parsed_vers.sort(key=lambda x: x[0])
+                
+                min_fw_float = parsed_vers[0][0]
+                min_fw_str = parsed_vers[0][1]
+                max_fw_str = parsed_vers[-1][1]
+
+                # Pokud je verze na disku a v patchi stejná, zobrazíme jen jednu
+                if min_fw_str == max_fw_str:
+                    fw_display = min_fw_str
+                else:
+                    fw_display = f"{min_fw_str} ➔ {max_fw_str}"
 
         games_dict[ppsa] = {
             "platform": "PS5",
             "ppsa": ppsa,
             "title": title_name,
-            "minFw": min_fw_float,
+            "minFw": min_fw_float,     # Používá se pro filtrování (základní disk)
             "fwDisplay": fw_display
         }
 
     games_list = list(games_dict.values())
     games_list.sort(key=lambda x: x['title'])
 
+    os.makedirs("docs", exist_ok=True)
     output_path = "docs/ps5gamelist.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(games_list, f, ensure_ascii=False, indent=2)
 
-    print("\n" + "="*50)
-    print(f"HOTOVO! Vygenerováno celkem {len(games_list)} her do {output_path}.")
+    print(f"HOTOVO! Vygenerováno {len(games_list)} her do {output_path}.")
 
 if __name__ == "__main__":
     main()
