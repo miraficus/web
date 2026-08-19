@@ -46,7 +46,7 @@
     "ppsa": "PPSA02388",
     "title": "A Plague Tale: Innocence",
     "minFw": 2.8,
-    "fwDisplay": "02.80"
+    "fwDisplay": "02.80 ➔ 03.16"
   },
   {
     "platform": "PS5",
@@ -164,22 +164,22 @@
     "platform": "PS5",
     "ppsa": "PPSA01490",
     "title": "Assassin's Creed® Valhalla",
-    "minFw": 6.8,
-    "fwDisplay": "06.80"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 06.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01491",
     "title": "Assassin's Creed® Valhalla",
-    "minFw": 6.8,
-    "fwDisplay": "06.80"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 06.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01504",
     "title": "Assassin's Creed® Valhalla",
-    "minFw": 6.8,
-    "fwDisplay": "06.80"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 06.80"
   },
   {
     "platform": "PS5",
@@ -199,15 +199,15 @@
     "platform": "PS5",
     "ppsa": "PPSA02093",
     "title": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 2.48,
+    "fwDisplay": "02.48 ➔ 09.96"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02094",
     "title": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 2.48,
+    "fwDisplay": "02.48 ➔ 09.96"
   },
   {
     "platform": "PS5",
@@ -284,14 +284,14 @@
     "ppsa": "PPSA01558",
     "title": "BIOHAZARD VILLAGE",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 06.02"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01560",
     "title": "BIOHAZARD VILLAGE Z Version",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 06.02"
   },
   {
     "platform": "PS5",
@@ -311,15 +311,15 @@
     "platform": "PS5",
     "ppsa": "PPSA01462",
     "title": "Borderlands® 3",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 09.96"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01463",
     "title": "Borderlands® 3",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 09.96"
   },
   {
     "platform": "PS5",
@@ -410,21 +410,21 @@
     "ppsa": "PPSA01628",
     "title": "Call of Duty®: Black Ops Cold War",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 04.00"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02052",
     "title": "Call of Duty®: Black Ops Cold War",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 04.00"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02050",
     "title": "Call of Duty®: Black Ops Cold War",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 04.00"
   },
   {
     "platform": "PS5",
@@ -438,7 +438,7 @@
     "ppsa": "PPSA02053",
     "title": "Call of Duty®: Black Ops Cold War",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 04.00"
   },
   {
     "platform": "PS5",
@@ -738,29 +738,29 @@
     "platform": "PS5",
     "ppsa": "PPSA01982",
     "title": "DOOM Eternal",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 09.96"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02221",
     "title": "DOOM Eternal",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 09.96"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01981",
     "title": "DOOM Eternal",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 09.96"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02222",
     "title": "DOOM Eternal",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 09.96"
   },
   {
     "platform": "PS5",
@@ -802,21 +802,21 @@
     "ppsa": "PPSA01339",
     "title": "Demon's Souls",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 01.20"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01342",
     "title": "Demon's Souls",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 01.20"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01340",
     "title": "Demon's Souls",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 01.20"
   },
   {
     "platform": "PS5",
@@ -878,15 +878,15 @@
     "platform": "PS5",
     "ppsa": "PPSA01442",
     "title": "Devil May Cry 5 Special Edition",
-    "minFw": 5.0,
-    "fwDisplay": "05.00"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 05.00"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01444",
     "title": "Devil May Cry 5 Special Edition",
-    "minFw": 5.0,
-    "fwDisplay": "05.00"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 05.00"
   },
   {
     "platform": "PS5",
@@ -1110,28 +1110,28 @@
     "ppsa": "PPSA01903",
     "title": "FINAL FANTASY VII REMAKE",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01773",
     "title": "FINAL FANTASY VII REMAKE",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01637",
     "title": "FINAL FANTASY VII REMAKE",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01911",
     "title": "FINAL FANTASY VII REMAKE",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.80"
   },
   {
     "platform": "PS5",
@@ -1256,8 +1256,8 @@
     "platform": "PS5",
     "ppsa": "PPSA01565",
     "title": "Go!Go!5次元GAME ネプテューヌ re★Verse",
-    "minFw": 2.8,
-    "fwDisplay": "02.80"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 02.80"
   },
   {
     "platform": "PS5",
@@ -1284,15 +1284,15 @@
     "platform": "PS5",
     "ppsa": "PPSA02981",
     "title": "GreedFall",
-    "minFw": 3.33,
-    "fwDisplay": "03.33"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 03.33"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02982",
     "title": "GreedFall",
-    "minFw": 3.33,
-    "fwDisplay": "03.33"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 03.33"
   },
   {
     "platform": "PS5",
@@ -1341,14 +1341,14 @@
     "ppsa": "PPSA01768",
     "title": "HITMAN 3",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 09.96"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01769",
     "title": "HITMAN 3",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 09.96"
   },
   {
     "platform": "PS5",
@@ -1431,15 +1431,15 @@
     "platform": "PS5",
     "ppsa": "PPSA02169",
     "title": "Hood: Outlaws & Legends",
-    "minFw": 4.81,
-    "fwDisplay": "04.81"
+    "minFw": 3.0,
+    "fwDisplay": "03.00 ➔ 04.81"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02170",
     "title": "Hood: Outlaws & Legends",
-    "minFw": 4.81,
-    "fwDisplay": "04.81"
+    "minFw": 3.0,
+    "fwDisplay": "03.00 ➔ 04.81"
   },
   {
     "platform": "PS5",
@@ -1473,36 +1473,36 @@
     "platform": "PS5",
     "ppsa": "PPSA01506",
     "title": "Immortals Fenyx Rising ™",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 03.16"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01507",
     "title": "Immortals Fenyx Rising ™",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 03.16"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01508",
     "title": "Immortals Fenyx Rising ™",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 03.16"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01510",
     "title": "Immortals Fenyx Rising ™",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.48,
+    "fwDisplay": "02.48 ➔ 03.16"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01509",
     "title": "Immortals Fenyx Rising ™",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.48,
+    "fwDisplay": "02.48 ➔ 03.16"
   },
   {
     "platform": "PS5",
@@ -1683,8 +1683,8 @@
     "platform": "PS5",
     "ppsa": "PPSA02047",
     "title": "Life is Strange: True Colors™",
-    "minFw": 4.8,
-    "fwDisplay": "04.80"
+    "minFw": 3.33,
+    "fwDisplay": "03.33 ➔ 04.80"
   },
   {
     "platform": "PS5",
@@ -1956,15 +1956,15 @@
     "platform": "PS5",
     "ppsa": "PPSA01749",
     "title": "Metro Exodus",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 03.16"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02395",
     "title": "Metro Exodus",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 03.16"
   },
   {
     "platform": "PS5",
@@ -2019,15 +2019,15 @@
     "platform": "PS5",
     "ppsa": "PPSA01617",
     "title": "Mortal Kombat 11",
-    "minFw": 6.2,
-    "fwDisplay": "06.02"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 06.02"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01619",
     "title": "Mortal Kombat 11",
-    "minFw": 6.2,
-    "fwDisplay": "06.02"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 06.02"
   },
   {
     "platform": "PS5",
@@ -2040,15 +2040,15 @@
     "platform": "PS5",
     "ppsa": "PPSA02868",
     "title": "Mortal Shell",
-    "minFw": 4.0,
-    "fwDisplay": "04.00"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 04.00"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02867",
     "title": "Mortal Shell",
-    "minFw": 4.0,
-    "fwDisplay": "04.00"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 04.00"
   },
   {
     "platform": "PS5",
@@ -2061,15 +2061,15 @@
     "platform": "PS5",
     "ppsa": "PPSA02450",
     "title": "Necromunda: Hired Gun",
-    "minFw": 4.8,
-    "fwDisplay": "04.80"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 05.16"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02449",
     "title": "Necromunda: Hired Gun",
-    "minFw": 4.8,
-    "fwDisplay": "04.80"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 05.16"
   },
   {
     "platform": "PS5",
@@ -2145,22 +2145,22 @@
     "platform": "PS5",
     "ppsa": "PPSA02462",
     "title": "Nioh 2 Remastered",
-    "minFw": 2.8,
-    "fwDisplay": "02.80"
+    "minFw": 2.38,
+    "fwDisplay": "02.38 ➔ 02.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02488",
     "title": "Nioh 2 Remastered",
-    "minFw": 2.8,
-    "fwDisplay": "02.80"
+    "minFw": 2.48,
+    "fwDisplay": "02.48 ➔ 02.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02489",
     "title": "Nioh 2 Remastered",
-    "minFw": 2.8,
-    "fwDisplay": "02.80"
+    "minFw": 2.48,
+    "fwDisplay": "02.48 ➔ 02.80"
   },
   {
     "platform": "PS5",
@@ -2236,29 +2236,29 @@
     "platform": "PS5",
     "ppsa": "PPSA01778",
     "title": "OUTRIDERS",
-    "minFw": 5.8,
-    "fwDisplay": "05.80"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 05.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01779",
     "title": "OUTRIDERS",
-    "minFw": 5.8,
-    "fwDisplay": "05.80"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 05.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01977",
     "title": "OUTRIDERS",
-    "minFw": 5.8,
-    "fwDisplay": "05.80"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 05.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01780",
     "title": "OUTRIDERS",
-    "minFw": 5.8,
-    "fwDisplay": "05.80"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 05.80"
   },
   {
     "platform": "PS5",
@@ -2453,15 +2453,15 @@
     "platform": "PS5",
     "ppsa": "PPSA01908",
     "title": "Override 2: Super Mech League",
-    "minFw": 2.8,
-    "fwDisplay": "02.80"
+    "minFw": 2.37,
+    "fwDisplay": "02.37 ➔ 02.80"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01907",
     "title": "Override 2: Super Mech League",
-    "minFw": 2.8,
-    "fwDisplay": "02.80"
+    "minFw": 2.48,
+    "fwDisplay": "02.48 ➔ 02.80"
   },
   {
     "platform": "PS5",
@@ -2565,22 +2565,22 @@
     "platform": "PS5",
     "ppsa": "PPSA01530",
     "title": "Puyo Puyo™ Tetris® 2",
-    "minFw": 3.32,
-    "fwDisplay": "03.32"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 03.32"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01937",
     "title": "Puyo Puyo™ Tetris® 2",
-    "minFw": 3.32,
-    "fwDisplay": "03.32"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 03.32"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01938",
     "title": "Puyo Puyo™ Tetris® 2",
-    "minFw": 3.32,
-    "fwDisplay": "03.32"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 03.32"
   },
   {
     "platform": "PS5",
@@ -2685,21 +2685,21 @@
     "ppsa": "PPSA01556",
     "title": "Resident Evil Village",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 06.02"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01557",
     "title": "Resident Evil Village",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 06.02"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01559",
     "title": "Resident Evil Village",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 06.02"
   },
   {
     "platform": "PS5",
@@ -2768,22 +2768,22 @@
     "platform": "PS5",
     "ppsa": "PPSA02174",
     "title": "SCARLET NEXUS",
-    "minFw": 4.81,
-    "fwDisplay": "04.81"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 04.81"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02211",
     "title": "SCARLET NEXUS",
-    "minFw": 4.81,
-    "fwDisplay": "04.81"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 04.81"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01776",
     "title": "SCARLET NEXUS",
-    "minFw": 4.81,
-    "fwDisplay": "04.81"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 04.81"
   },
   {
     "platform": "PS5",
@@ -2796,15 +2796,15 @@
     "platform": "PS5",
     "ppsa": "PPSA02199",
     "title": "STAR WARS Jedi: Fallen Order™",
-    "minFw": 3.32,
-    "fwDisplay": "03.32"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 03.32"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02198",
     "title": "STAR WARS Jedi: Fallen Order™",
-    "minFw": 3.32,
-    "fwDisplay": "03.32"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 03.32"
   },
   {
     "platform": "PS5",
@@ -3154,7 +3154,7 @@
     "ppsa": "PPSA01800",
     "title": "Temtem",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.00"
   },
   {
     "platform": "PS5",
@@ -3322,21 +3322,21 @@
     "ppsa": "PPSA01771",
     "title": "The Sinking City",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.48"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02921",
     "title": "The Sinking City",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.48"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01772",
     "title": "The Sinking City",
     "minFw": 1.0,
-    "fwDisplay": "01.00"
+    "fwDisplay": "01.00 ➔ 02.48"
   },
   {
     "platform": "PS5",
@@ -3510,15 +3510,15 @@
     "platform": "PS5",
     "ppsa": "PPSA01363",
     "title": "WRC 9 FIA World Rally Championship",
-    "minFw": 2.48,
-    "fwDisplay": "02.48"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 02.48"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01364",
     "title": "WRC 9 FIA World Rally Championship",
-    "minFw": 2.48,
-    "fwDisplay": "02.48"
+    "minFw": 1.2,
+    "fwDisplay": "01.20 ➔ 02.48"
   },
   {
     "platform": "PS5",
@@ -3580,22 +3580,22 @@
     "platform": "PS5",
     "ppsa": "PPSA01487",
     "title": "Watch Dogs®: Legion",
-    "minFw": 8.32,
-    "fwDisplay": "08.32"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 08.32"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01488",
     "title": "Watch Dogs®: Legion",
-    "minFw": 8.32,
-    "fwDisplay": "08.32"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 08.32"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA01489",
     "title": "Watch Dogs®: Legion",
-    "minFw": 8.32,
-    "fwDisplay": "08.32"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 08.32"
   },
   {
     "platform": "PS5",
@@ -3664,15 +3664,15 @@
     "platform": "PS5",
     "ppsa": "PPSA02384",
     "title": "Yakuza: Like A Dragon",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 03.16"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02383",
     "title": "Yakuza: Like A Dragon",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 03.16"
   },
   {
     "platform": "PS5",
@@ -3741,8 +3741,8 @@
     "platform": "PS5",
     "ppsa": "PPSA02097",
     "title": "ライザのアトリエ２ ～失われた伝承と秘密の妖精～",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 09.96"
   },
   {
     "platform": "PS5",
@@ -3762,21 +3762,21 @@
     "platform": "PS5",
     "ppsa": "PPSA01929",
     "title": "緋紅結繫",
-    "minFw": 4.81,
-    "fwDisplay": "04.81"
+    "minFw": 3.16,
+    "fwDisplay": "03.16 ➔ 04.81"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02095",
     "title": "萊莎的鍊金工房２ ～失落傳說與秘密妖精～",
-    "minFw": 9.96,
-    "fwDisplay": "09.96"
+    "minFw": 2.0,
+    "fwDisplay": "02.00 ➔ 09.96"
   },
   {
     "platform": "PS5",
     "ppsa": "PPSA02690",
     "title": "龍が如く７　光と闇の行方　インターナショナル",
-    "minFw": 3.16,
-    "fwDisplay": "03.16"
+    "minFw": 2.8,
+    "fwDisplay": "02.80 ➔ 03.16"
   }
 ]
