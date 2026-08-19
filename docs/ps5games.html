@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS5 Kompatibilita Her podle FW – Material Design 3</title>
+
+<!-- Material Web Components (M3) -->
+<script type="module" src="https://esm.run/@material/web/all"></script>
+
+<style>
+    :root {
+        --theme-color: #6200ee;
+    }
+
+    /* Světlý režim */
+    :root[data-theme="light"] {
+        --bg: #f3f3f3;
+        --text: #000;
+        --card-bg: #fff;
+
+        --md-sys-color-surface: #ffffff;
+        --md-sys-color-on-surface: #000000;
+        --md-sys-color-outline: #444444;
+    }
+
+    /* Tmavý režim */
+    :root[data-theme="dark"] {
+        --bg: #121212;
+        --text: #fff;
+        --card-bg: #1e1e1e;
+
+        --md-sys-color-surface: #1e1e1e;
+        --md-sys-color-on-surface: #ffffff;
+        --md-sys-color-outline: #bbbbbb;
+    }
+
+    body {
+        font-family: Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        text-align: center;
+        opacity: 0.7;
+        margin-bottom: 30px;
+    }
+
+    .controls-card {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 16px;
+        margin-bottom: 25px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .control-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .control-group label {
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.9;
+    }
+
+    select {
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid var(--md-sys-color-outline);
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    /* Tabulka s výpisem */
+    .table-container {
+        background: var(--card-bg);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    th, td {
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    }
+
+    th {
+        font-weight: 600;
+        opacity: 0.8;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    :root[data-theme="dark"] th {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .ppsa-code {
+        font-family: monospace;
+        font-weight: bold;
+        opacity: 0.85;
+    }
+
+    .fw-badge {
+        background: rgba(98, 0, 238, 0.15);
+        color: var(--theme-color);
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .theme-toggle {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 26px;
+        user-select: none;
+        z-index: 100;
+    }
+
+    .back-btn {
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+
+<!-- Přepínač režimu -->
+<div class="theme-toggle" id="themeToggle">🌙</div>
+
+<div class="container">
+    <div class="back-btn">
+        <md-text-button onclick="location.href='index.html'">← Zpět na projekty</md-text-button>
+    </div>
+
+    <h1>💿 PS5 Fyzické Hry podle FW</h1>
+    <div class="subtitle">Ověř si, které diskové verze her rozjedeš na své verzi firmwaru</div>
+
+    <!-- Ovládací panely -->
+    <div class="controls-card">
+        <div class="control-group">
+            <label for="platformSelect">Platforma:</label>
+            <select id="platformSelect" onchange="renderGames()">
+                <option value="PS5">PlayStation 5</option>
+                <option value="PS4">PlayStation 4 (Připravuje se)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="fwSelect">Vybraný Firmware (a nižší):</label>
+            <select id="fwSelect" onchange="renderGames()">
+                <option value="1.00">01.00.00 (Launch)</option>
+                <option value="2.00">02.00.00</option>
+                <option value="3.00">03.00.00</option>
+                <option value="4.00">04.00.00</option>
+                <option value="5.00">05.00.00</option>
+                <option value="6.00">06.00.00</option>
+                <option value="7.00">07.00.00</option>
+                <option value="8.00">08.00.00</option>
+                <option value="9.00">09.00.00</option>
+                <option value="10.00">10.00.00</option>
+                <option value="11.00">11.00.00</option>
+                <option value="11.60" selected>11.60.00</option>
+                <option value="12.00">12.00.00</option>
+                <option value="12.60">12.60.00</option>
+                <option value="13.00">13.00.00</option>
+                <option value="13.20">13.20.00</option>
+                <option value="13.40">13.40.00</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Výpis her -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Hry</th>
+                    <th>Název Hry</th>
+                    <th>Vyžadovaný FW</th>
+                    <th>Akce</th>
+                </tr>
+            </thead>
+            <tbody id="gameList"></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+/* ------------------------------
+   Přepínač světlý/tmavý režim
+--------------------------------*/
+const themeToggle = document.getElementById("themeToggle");
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    themeToggle.textContent = savedTheme === "dark" ? "🌞" : "🌙";
+} else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+    themeToggle.textContent = prefersDark ? "🌞" : "🌙";
+}
+
+themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    themeToggle.textContent = next === "dark" ? "🌞" : "🌙";
+});
+
+/* ------------------------------
+   Načítání dat a funkční vyhledávání
+--------------------------------*/
+let gamesData = [];
+
+// Bezpečné otevření odkazů v nové záložce pro Material Web Components
+function buyGame(title) {
+    const searchQuery = encodeURIComponent(`${title} ps5`);
+    const googleUrl = `https://www.google.com/search?q=${searchQuery}`;
+    window.open(googleUrl, '_blank', 'noopener,noreferrer');
+}
+
+async function loadGamesData() {
+    try {
+        const response = await fetch('ps5gamelist.json');
+        if (!response.ok) throw new Error("JSON nenalezen");
+        gamesData = await response.json();
+        renderGames();
+    } catch (error) {
+        console.warn('Nepodařilo se načíst ps5gamelist.json, používám testovací data.', error);
+        // Fallback testovací data pro lokální vývoj
+        gamesData = [
+            { platform: "PS5", ppsa: "PPSA01521", title: "Demon's Souls", minFw: 1.00, fwDisplay: "01.00" },
+            { platform: "PS5", ppsa: "PPSA01343", title: "Spider-Man: Miles Morales", minFw: 2.00, fwDisplay: "02.00" },
+            { platform: "PS5", ppsa: "PPSA02636", title: "Ratchet & Clank: Rift Apart", minFw: 3.00, fwDisplay: "03.00" },
+            { platform: "PS5", ppsa: "PPSA01411", title: "Returnal", minFw: 3.20, fwDisplay: "03.20" },
+            { platform: "PS5", ppsa: "PPSA02380", title: "Horizon Forbidden West", minFw: 4.50, fwDisplay: "04.50" },
+            { platform: "PS5", ppsa: "PPSA05678", title: "God of War Ragnarök", minFw: 6.00, fwDisplay: "06.00" },
+            { platform: "PS5", ppsa: "PPSA07412", title: "Final Fantasy XVI", minFw: 7.00, fwDisplay: "07.00" },
+            { platform: "PS5", ppsa: "PPSA08888", title: "Gothic Remake", minFw: 12.00, fwDisplay: "12.00" }
+        ];
+        renderGames();
+    }
+}
+
+function renderGames() {
+    const selectedPlatform = document.getElementById("platformSelect").value;
+    const selectedFW = parseFloat(document.getElementById("fwSelect").value);
+    const tbody = document.getElementById("gameList");
+    
+    tbody.innerHTML = "";
+
+    const filteredGames = gamesData.filter(game => {
+        return game.platform === selectedPlatform && game.minFw <= selectedFW;
+    });
+
+    filteredGames.forEach(game => {
+        const tr = document.createElement("tr");
+        
+        tr.innerHTML = `
+            <td><span class="ppsa-code">${game.ppsa}</span></td>
+            <td><strong>${game.title}</strong></td>
+            <td><span class="fw-badge">v${game.fwDisplay || game.minFw.toFixed(2)}</span></td>
+            <td>
+                <md-filled-button class="buy-btn" data-title="${game.title.replace(/"/g, '&quot;')}">
+                    Koupit
+                </md-filled-button>
+            </td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    // Navázání event listenerů pro spolehlivé otevření nové záložky
+    document.querySelectorAll('.buy-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const title = e.currentTarget.getAttribute('data-title');
+            buyGame(title);
+        });
+    });
+
+    if (filteredGames.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding: 30px;">Pro tento FW nebyly nalezeny žádné kompatibilní hry.</td></tr>`;
+    }
+}
+
+// Spuštění načítání dat
+loadGamesData();
+</script>
+
+</body>
+</html>
