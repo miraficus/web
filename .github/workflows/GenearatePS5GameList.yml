@@ -1,0 +1,39 @@
+name: Aktualizovat PS5 Game List
+
+on:
+  workflow_dispatch: # Spuštění pouze ručně přes rozhraní GitHubu (Actions -> Run workflow)
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repozitáře
+      uses: actions/checkout@v4
+
+    - name: Nastavení Pythonu
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Spuštění generátoru
+      run: python generate_games.py
+
+    - name: Vytvoření Pull Requestu
+      uses: peter-evans/create-pull-request@v6
+      with:
+        commit-message: "Auto-update: Aktualizace seznamu PS5 her a FW"
+        title: " Aktualizace PS5 databáze her"
+        body: |
+          Automaticky vygenerovaný Pull Request s aktualizovaným seznamem PS5 her a jejich požadovaným firmwarem (`ps5gamelist.json`).
+          
+          Zkontroluj změny v diffu a potvrď merge.
+        branch: auto-update-ps5-games
+        delete-branch: true # Smaže dočasnou větev po mergi
+        labels: |
+          automated pr
+          database
