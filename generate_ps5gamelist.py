@@ -6,8 +6,11 @@ import xml.etree.ElementTree as ET
 import sys
 import ssl
 import os
+import csv
+import io
 
-TSV_URL = "https://raw.githubusercontent.com/1jtp8sobiu/ps5-pkg/master/PS5_XML.tsv"
+GARLICSAVES_CSV_URL = "https://www.garlicsaves.com/tools/entitlements/csv?platform=ps5"
+GITHUB_TSV_URL = "https://raw.githubusercontent.com/1jtp8sobiu/ps5-pkg/master/PS5_XML.tsv"
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -20,7 +23,7 @@ ssl_context.check_hostname = False
 ssl_context.verify_mode = ssl.CERT_NONE
 
 def parse_system_ver(system_ver_str):
-    """Převede číslování Sony na reálnou verzi PS5 FW"""
+    """Převede číslování Sony (např. 0x06000000 nebo dekadicky) na reálnou verzi PS5 FW"""
     try:
         val = int(system_ver_str)
         major = (val >> 24) & 0xFF
@@ -36,7 +39,10 @@ def parse_system_ver(system_ver_str):
         return None, None
 
 def fetch_xml_all_versions(url):
-    """Projede XML a vrátí seznam všech nalezených verzí FW pro danou hru"""
+    """Stáhne XML a vrátí seznam všech nalezených verzí FW pro danou hru"""
+    if not url or not url.startswith('http'):
+        return []
+
     req = urllib.request.Request(url, headers=HEADERS)
     raw_versions = []
     
@@ -47,7 +53,6 @@ def fetch_xml_all_versions(url):
             if not xml_text.strip():
                 return []
 
-            # 1. Hledání všech atributů system_ver v XML přes ElementTree
             try:
                 root = ET.fromstring(xml_text)
                 for pkg in root.findall('.//package'):
@@ -56,90 +61,183 @@ def fetch_xml_all_versions(url):
             except Exception:
                 pass
 
-            # 2. Záložní Regex pro odchycení všech výskytů
             if not raw_versions:
                 matches = re.findall(r'system_ver=["\'](\d+)["\']', xml_text)
                 raw_versions.extend(matches)
 
-    except Exception as e:
-        print(f"   [!] Chyba při stahování XML: {e}")
+    except Exception:
+        pass
 
     return raw_versions
 
+def is_likely_dlc_title(title):
+    """Detekuje, zda se jedná o DLC/doplněk podle klíčových slov v názvu"""
+    dlc_keywords = [
+        'costume', 'add-on', 'addon', 'expansion', 'season pass', 
+        'deluxe edition pack', 'pre-order bonus', 'coin', 'points', 
+        'dlc', 'bonus pack', 'item', 'bundle pack'
+    ]
+    title_lower = title.lower()
+    return any(keyword in title_lower for keyword in dlc_keywords)
+
 def main():
-    print("Stahuji TSV soubor...")
-    req = urllib.request.Request(TSV_URL, headers=HEADERS)
-    
-    try:
-        with urllib.request.urlopen(req, timeout=15, context=ssl_context) as response:
-            lines = response.read().decode('utf-8').splitlines()
-    except Exception as e:
-        print(f"Kritická chyba při stahování TSV: {e}")
-        sys.exit(1)
-
+    # Slovník pro ukládání unikátních PPSA:
+    # ppsa -> { "title": str, "is_game_type": bool, "xml_urls": set() }
     games_dict = {}
-    print(f"Celkem řádků v TSV: {len(lines)}")
-    print("Zpracovávám položky...")
 
-    for line in lines[1:]:
-        parts = line.split('\t')
-        if len(parts) < 2:
-            continue
+    # ----------------------------------------------------
+    # KROK 1: Načtení dat z GarlicSaves CSV (Hlavní zdroj)
+    # ----------------------------------------------------
+    print("1. Stahuji hlavní databázi z GarlicSaves (CSV)...")
+    req_garlic = urllib.request.Request(GARLICSAVES_CSV_URL, headers=HEADERS)
+    try:
+        with urllib.request.urlopen(req_garlic, timeout=20, context=ssl_context) as response:
+            csv_content = response.read().decode('utf-8', errors='ignore')
             
-        content_id, title_name = parts[0].strip(), parts[1].strip()
-        version_url = parts[2].strip() if len(parts) > 2 else ""
-        
-        ppsa_match = re.search(r'(PPSA\d{5})', content_id)
-        if not ppsa_match:
-            continue
-            
-        ppsa = ppsa_match.group(1)
-        if ppsa in games_dict:
-            continue
+            reader = csv.DictReader(io.StringIO(csv_content))
+            for row in reader:
+                title_name = row.get('title', '').strip()
+                title_id = row.get('title_id', '').strip()
+                package_url = row.get('package_url', '').strip()
+                content_type = row.get('content_type', '').strip().lower()
 
-        min_fw_float = 0.0
-        fw_display = "Neznámá"
+                # Vytáhnutí PPSA ID z kódu
+                ppsa_match = re.search(r'(PPSA\d{5})', title_id)
+                if not ppsa_match:
+                    continue
 
-        if version_url.startswith('http'):
-            raw_vers = fetch_xml_all_versions(version_url)
-            parsed_vers = []
+                ppsa = ppsa_match.group(1)
+                
+                # Zjištění, zda jde o plnou hru nebo DLC
+                is_full_game = (content_type == 'game') and not is_likely_dlc_title(title_name)
 
+                # Kontrola duplicit podle PPSA ID
+                if ppsa not in games_dict:
+                    games_dict[ppsa] = {
+                        "title": title_name if title_name else ppsa,
+                        "is_game_type": is_full_game,
+                        "xml_urls": set()
+                    }
+                else:
+                    # Pokud už záznam máme z DLC a teď přišel řádek s plnou hrou, nahradíme název
+                    if not games_dict[ppsa]["is_game_type"] and is_full_game:
+                        games_dict[ppsa]["title"] = title_name
+                        games_dict[ppsa]["is_game_type"] = True
+
+                # Odkaz na XML přidáme vždy (slouží pro zjištění verzí)
+                if package_url.startswith('http'):
+                    games_dict[ppsa]["xml_urls"].add(package_url)
+
+        print(f"   Načteno a sloučeno {len(games_dict)} unikátních PS5 her/PPSA z GarlicSaves.")
+
+    except Exception as e:
+        print(f"   [!] Chyba při stahování/čtení GarlicSaves CSV: {e}")
+
+    # ----------------------------------------------------
+    # KROK 2: Doplnění dat z GitHub TSV (Záložní zdroj)
+    # ----------------------------------------------------
+    print("2. Doplňuji historická data z GitHub TSV...")
+    req_github = urllib.request.Request(GITHUB_TSV_URL, headers=HEADERS)
+    try:
+        with urllib.request.urlopen(req_github, timeout=15, context=ssl_context) as response:
+            tsv_lines = response.read().decode('utf-8').splitlines()
+
+            added_new = 0
+            enriched_existing = 0
+
+            for line in tsv_lines[1:]:
+                parts = line.split('\t')
+                if len(parts) < 2:
+                    continue
+
+                content_id, title_name = parts[0].strip(), parts[1].strip()
+                version_url = parts[2].strip() if len(parts) > 2 else ""
+
+                ppsa_match = re.search(r'(PPSA\d{5})', content_id)
+                if not ppsa_match:
+                    continue
+
+                ppsa = ppsa_match.group(1)
+
+                if ppsa in games_dict:
+                    # Pokud máme z GitHubu čistší název, než jaký byl u DLC v GarlicSaves
+                    if title_name and not is_likely_dlc_title(title_name):
+                        if not games_dict[ppsa]["is_game_type"] or len(title_name) > len(games_dict[ppsa]["title"]):
+                            games_dict[ppsa]["title"] = title_name
+                            games_dict[ppsa]["is_game_type"] = True
+
+                    if version_url.startswith('http'):
+                        games_dict[ppsa]["xml_urls"].add(version_url)
+                        enriched_existing += 1
+                else:
+                    games_dict[ppsa] = {
+                        "title": title_name,
+                        "is_game_type": not is_likely_dlc_title(title_name),
+                        "xml_urls": {version_url} if version_url.startswith('http') else set()
+                    }
+                    added_new += 1
+
+            print(f"   Doplněno {enriched_existing} odkazů k existujícím hrám, přidáno {added_new} nových her z GitHubu.")
+
+    except Exception as e:
+        print(f"   [!] Chyba při stahování GitHub TSV: {e}")
+
+    # ----------------------------------------------------
+    # KROK 3: Stahování XML souborů a sestavení výsledku
+    # ----------------------------------------------------
+    print("3. Stahuji verze z XML a sestavuji výsledný JSON...")
+    games_list = []
+    total_games = len(games_dict)
+
+    for idx, (ppsa, data) in enumerate(games_dict.items(), start=1):
+        parsed_vers = []
+
+        # Stáhneme verze ze všech propojených XML odkazů
+        for url in data["xml_urls"]:
+            raw_vers = fetch_xml_all_versions(url)
             for rv in raw_vers:
                 f_str, f_num = parse_system_ver(rv)
                 if f_str and f_num:
                     parsed_vers.append((f_num, f_str))
 
-            if parsed_vers:
-                # Seřadíme verze od nejnižší po nejvyšší
-                parsed_vers.sort(key=lambda x: x[0])
-                
-                min_fw_float = parsed_vers[0][0]
-                min_fw_str = parsed_vers[0][1]
-                max_fw_str = parsed_vers[-1][1]
+        min_fw_float = 0.0
+        fw_display = "Neznámá"
 
-                # Pokud je verze na disku a v patchi stejná, zobrazíme jen jednu
-                if min_fw_str == max_fw_str:
-                    fw_display = min_fw_str
-                else:
-                    fw_display = f"{min_fw_str} ➔ {max_fw_str}"
+        if parsed_vers:
+            # Seřazení podle čísla verze od nejstarší po nejnovější
+            parsed_vers.sort(key=lambda x: x[0])
+            
+            min_fw_float = parsed_vers[0][0]
+            min_fw_str = parsed_vers[0][1]
+            max_fw_str = parsed_vers[-1][1]
 
-        games_dict[ppsa] = {
+            if min_fw_str == max_fw_str:
+                fw_display = min_fw_str
+            else:
+                fw_display = f"{min_fw_str} ➔ {max_fw_str}"
+
+        games_list.append({
             "platform": "PS5",
             "ppsa": ppsa,
-            "title": title_name,
-            "minFw": min_fw_float,     # Používá se pro filtrování (základní disk)
+            "title": data["title"],
+            "minFw": min_fw_float,
             "fwDisplay": fw_display
-        }
+        })
 
-    games_list = list(games_dict.values())
+        if idx % 100 == 0 or idx == total_games:
+            print(f"   Zpracováno {idx}/{total_games} her...")
+
+    # Seřazení celého seznamu abecedně podle názvu hry
     games_list.sort(key=lambda x: x['title'])
 
+    # Uložení do souboru docs/ps5gamelist.json
     os.makedirs("docs", exist_ok=True)
     output_path = "docs/ps5gamelist.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(games_list, f, ensure_ascii=False, indent=2)
 
-    print(f"HOTOVO! Vygenerováno {len(games_list)} her do {output_path}.")
+    print("--------------------------------------------------")
+    print(f"HOTOVO! Celkem vygenerováno {len(games_list)} unikátních her do {output_path}.")
 
 if __name__ == "__main__":
     main()
