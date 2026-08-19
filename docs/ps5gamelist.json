@@ -1,1 +1,3782 @@
-[]
+[
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02800",
+    "title": "3D Billiards",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02799",
+    "title": "3D Billiards",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03647",
+    "title": "3DMiniGolf",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03646",
+    "title": "3DMiniGolf",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03821",
+    "title": "A Little Lily Princess",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03822",
+    "title": "A Little Lily Princess",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02388",
+    "title": "A Plague Tale: Innocence",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01325",
+    "title": "ASTRO's PLAYROOM",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02792",
+    "title": "Active Neurons 3",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02793",
+    "title": "Active Neurons 3",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02709",
+    "title": "Aerial_Knight's Never Yield",
+    "minFw": 5.2,
+    "fwDisplay": "05.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02710",
+    "title": "Aerial_Knight's Never Yield",
+    "minFw": 5.2,
+    "fwDisplay": "05.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02663",
+    "title": "Alex Kidd in Miracle World DX",
+    "minFw": 4.3,
+    "fwDisplay": "04.03"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02664",
+    "title": "Alex Kidd in Miracle World DX",
+    "minFw": 4.3,
+    "fwDisplay": "04.03"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02751",
+    "title": "Aliens",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02750",
+    "title": "Aliens",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03086",
+    "title": "Angels with Scaly Wings",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03087",
+    "title": "Angels with Scaly Wings",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02700",
+    "title": "Anodyne 2: Return to Dust",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02701",
+    "title": "Anodyne 2: Return to Dust",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01781",
+    "title": "Apple TV",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03360",
+    "title": "Arkan: The dog adventurer",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03359",
+    "title": "Arkan: The dog adventurer",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01490",
+    "title": "Assassin's Creed® Valhalla",
+    "minFw": 6.8,
+    "fwDisplay": "06.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01491",
+    "title": "Assassin's Creed® Valhalla",
+    "minFw": 6.8,
+    "fwDisplay": "06.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01504",
+    "title": "Assassin's Creed® Valhalla",
+    "minFw": 6.8,
+    "fwDisplay": "06.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01532",
+    "title": "Assassin's Creed® Valhalla",
+    "minFw": 6.8,
+    "fwDisplay": "06.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01533",
+    "title": "Assassin's Creed® Valhalla",
+    "minFw": 6.8,
+    "fwDisplay": "06.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02093",
+    "title": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02094",
+    "title": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02916",
+    "title": "Auto Chess",
+    "minFw": 6.2,
+    "fwDisplay": "06.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02917",
+    "title": "Auto Chess",
+    "minFw": 6.2,
+    "fwDisplay": "06.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01890",
+    "title": "BALAN WONDERWORLD",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02057",
+    "title": "BALAN WONDERWORLD",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02058",
+    "title": "BALAN WONDERWORLD",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02059",
+    "title": "BALAN WONDERWORLD",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02445",
+    "title": "BALAN WONDERWORLD Demo",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02447",
+    "title": "BALAN WONDERWORLD Demo",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02448",
+    "title": "BALAN WONDERWORLD Demo",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02446",
+    "title": "BALAN WONDERWORLD Demo",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01558",
+    "title": "BIOHAZARD VILLAGE",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01560",
+    "title": "BIOHAZARD VILLAGE Z Version",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02603",
+    "title": "Bibi & Tina at the Horse Farm",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02604",
+    "title": "Bibi & Tina at the horse farm",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01462",
+    "title": "Borderlands® 3",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01463",
+    "title": "Borderlands® 3",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01502",
+    "title": "Bugsnax",
+    "minFw": 5.16,
+    "fwDisplay": "05.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01539",
+    "title": "Bugsnax",
+    "minFw": 5.16,
+    "fwDisplay": "05.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01540",
+    "title": "Bugsnax",
+    "minFw": 5.16,
+    "fwDisplay": "05.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01503",
+    "title": "Bugsnax",
+    "minFw": 5.16,
+    "fwDisplay": "05.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02378",
+    "title": "Buster's Quest: Trials of Hamsterdam",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02379",
+    "title": "Buster's Quest: Trials of Hamsterdam",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02380",
+    "title": "Buster's Quest: Trials of Hamsterdam",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02938",
+    "title": "C14 Dating",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02937",
+    "title": "C14 Dating",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02189",
+    "title": "CRSED",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01965",
+    "title": "CRSED",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01966",
+    "title": "CRSED",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01628",
+    "title": "Call of Duty®: Black Ops Cold War",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02052",
+    "title": "Call of Duty®: Black Ops Cold War",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02050",
+    "title": "Call of Duty®: Black Ops Cold War",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02051",
+    "title": "Call of Duty®: Black Ops Cold War",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02053",
+    "title": "Call of Duty®: Black Ops Cold War",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01546",
+    "title": "Call of the Sea",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01545",
+    "title": "Call of the Sea",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02782",
+    "title": "Can't Drive This",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02784",
+    "title": "Can't Drive This",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02743",
+    "title": "Can't Drive This",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02744",
+    "title": "Can't Drive This",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03039",
+    "title": "Chicory: A Colorful Tale",
+    "minFw": 8.0,
+    "fwDisplay": "08.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02184",
+    "title": "Chivalry 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02183",
+    "title": "Chivalry 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03423",
+    "title": "Chivalry 2 Beta",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03345",
+    "title": "Chivalry 2 Beta",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03346",
+    "title": "Chivalry 2 Beta",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03422",
+    "title": "Chivalry 2 Beta",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04271",
+    "title": "Chroma Quaternion",
+    "minFw": 7.96,
+    "fwDisplay": "07.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02277",
+    "title": "Concept Destruction",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02298",
+    "title": "Concept Destruction",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01951",
+    "title": "Control Ultimate Edition",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01949",
+    "title": "Control Ultimate Edition",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01954",
+    "title": "Control Ultimate Edition",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02432",
+    "title": "Crash Bandicoot 4: It's About Time",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02433",
+    "title": "Crash Bandicoot 4: It's About Time",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02436",
+    "title": "Crash Bandicoot 4: It's About Time",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02435",
+    "title": "Crash Bandicoot 4: It's About Time",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02752",
+    "title": "Crimsonland",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02753",
+    "title": "Crimsonland",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02123",
+    "title": "Cris Tales",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02121",
+    "title": "Cris Tales",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03574",
+    "title": "Cross the Moon",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03575",
+    "title": "Cross the Moon",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03234",
+    "title": "CrossCode",
+    "minFw": 8.0,
+    "fwDisplay": "08.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03235",
+    "title": "CrossCode",
+    "minFw": 8.0,
+    "fwDisplay": "08.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02717",
+    "title": "CrossKrush",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02718",
+    "title": "CrossKrush",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01926",
+    "title": "Crunchyroll",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02817",
+    "title": "Curved Space",
+    "minFw": 4.0,
+    "fwDisplay": "04.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02818",
+    "title": "Curved Space",
+    "minFw": 4.0,
+    "fwDisplay": "04.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01882",
+    "title": "Cyber Shadow",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01883",
+    "title": "Cyber Shadow",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02893",
+    "title": "DARQ Complete Edition",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02892",
+    "title": "DARQ Complete Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01551",
+    "title": "DIRT5",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01552",
+    "title": "DIRT5",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01982",
+    "title": "DOOM Eternal",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02221",
+    "title": "DOOM Eternal",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01981",
+    "title": "DOOM Eternal",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02222",
+    "title": "DOOM Eternal",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02681",
+    "title": "Dark Alliance",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02680",
+    "title": "Dark Alliance",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02048",
+    "title": "Dead by Daylight",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02049",
+    "title": "Dead by Daylight",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02658",
+    "title": "Death Tales",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01339",
+    "title": "Demon's Souls",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01342",
+    "title": "Demon's Souls",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01340",
+    "title": "Demon's Souls",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02409",
+    "title": "Destiny 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02410",
+    "title": "Destiny 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02411",
+    "title": "Destiny 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01294",
+    "title": "Destruction AllStars (TM)",
+    "minFw": 1.2,
+    "fwDisplay": "01.20"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02630",
+    "title": "Destruction AllStars™",
+    "minFw": 6.0,
+    "fwDisplay": "06.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02713",
+    "title": "Destruction AllStars™",
+    "minFw": 6.0,
+    "fwDisplay": "06.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02714",
+    "title": "Destruction AllStars™",
+    "minFw": 6.0,
+    "fwDisplay": "06.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02712",
+    "title": "Destruction AllStars™",
+    "minFw": 6.0,
+    "fwDisplay": "06.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01442",
+    "title": "Devil May Cry 5 Special Edition",
+    "minFw": 5.0,
+    "fwDisplay": "05.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01444",
+    "title": "Devil May Cry 5 Special Edition",
+    "minFw": 5.0,
+    "fwDisplay": "05.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03268",
+    "title": "Disco Elysium",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03329",
+    "title": "Disco Elysium",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03760",
+    "title": "Donuts'n'Justice",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03761",
+    "title": "Donuts'n'Justice",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02928",
+    "title": "Dreaming Sarah",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02929",
+    "title": "Dreaming Sarah",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03592",
+    "title": "Drowning",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03591",
+    "title": "Drowning",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02944",
+    "title": "Dungeons & Bombs",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02945",
+    "title": "Dungeons & Bombs",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02600",
+    "title": "Eight Dragons",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02601",
+    "title": "Eight Dragons",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03051",
+    "title": "Enlisted",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03052",
+    "title": "Enlisted",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03053",
+    "title": "Enlisted",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02919",
+    "title": "Escape from Life Inc",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02918",
+    "title": "Escape from Life Inc",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02508",
+    "title": "Evil Inside",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02507",
+    "title": "Evil Inside",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03571",
+    "title": "Evil Inside",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03494",
+    "title": "Exodemon",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03156",
+    "title": "Exodemon",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03157",
+    "title": "Exodemon",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02697",
+    "title": "F1® 2021",
+    "minFw": 5.0,
+    "fwDisplay": "05.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02696",
+    "title": "F1® 2021",
+    "minFw": 5.0,
+    "fwDisplay": "05.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01326",
+    "title": "FIFA 21",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01327",
+    "title": "FIFA 21",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01430",
+    "title": "FIFA 21",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01432",
+    "title": "FIFA 21",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01433",
+    "title": "FIFA 21",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01431",
+    "title": "FIFA 21",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01903",
+    "title": "FINAL FANTASY VII REMAKE",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01773",
+    "title": "FINAL FANTASY VII REMAKE",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01637",
+    "title": "FINAL FANTASY VII REMAKE",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01911",
+    "title": "FINAL FANTASY VII REMAKE",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02955",
+    "title": "FINAL FANTASY XIV Online",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02862",
+    "title": "FINAL FANTASY XIV Online",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02954",
+    "title": "FINAL FANTASY XIV Online",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03842",
+    "title": "Family Mysteries 3: Criminal Mindset",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03843",
+    "title": "Family Mysteries 3: Criminal Mindset",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02833",
+    "title": "Farm For Your Life",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02834",
+    "title": "Farm For Your Life",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01922",
+    "title": "Fortnite",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01923",
+    "title": "Fortnite",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02654",
+    "title": "Freddy Spaghetti",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02655",
+    "title": "Freddy Spaghetti",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02038",
+    "title": "Funimation",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02180",
+    "title": "GUILTY GEAR -STRIVE-",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02330",
+    "title": "GUILTY GEAR -STRIVE-",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02267",
+    "title": "GUILTY GEAR -STRIVE- Open Beta",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02576",
+    "title": "GUILTY GEAR -STRIVE- Open Beta",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02562",
+    "title": "Genshin Impact",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01565",
+    "title": "Go!Go!5次元GAME ネプテューヌ re★Verse",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01347",
+    "title": "Godfall",
+    "minFw": 5.16,
+    "fwDisplay": "05.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02898",
+    "title": "GraviFire",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02899",
+    "title": "GraviFire",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02981",
+    "title": "GreedFall",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02982",
+    "title": "GreedFall",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02257",
+    "title": "Guilty Gear -Strive-",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02181",
+    "title": "Guilty Gear -Strive-",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02568",
+    "title": "Guilty Gear -Strive- Open Beta",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02268",
+    "title": "Guilty Gear -Strive- Open Beta",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03727",
+    "title": "Gutwhale",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03728",
+    "title": "Gutwhale",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01768",
+    "title": "HITMAN 3",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01769",
+    "title": "HITMAN 3",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03711",
+    "title": "Hades",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01561",
+    "title": "Haven",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01562",
+    "title": "Haven",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01563",
+    "title": "Haven",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03372",
+    "title": "Heal (ヒール)",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03370",
+    "title": "Heal: Console Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03371",
+    "title": "Heal: Console Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03255",
+    "title": "Hellbreachers",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03254",
+    "title": "Hellbreachers",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03566",
+    "title": "Hentai vs. Evil",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03565",
+    "title": "Hentai vs. Evil",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02169",
+    "title": "Hood: Outlaws & Legends",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02170",
+    "title": "Hood: Outlaws & Legends",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02431",
+    "title": "Human Fall Flat",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02429",
+    "title": "Human Fall Flat",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01899",
+    "title": "Hunting Simulator 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01900",
+    "title": "Hunting Simulator 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01506",
+    "title": "Immortals Fenyx Rising ™",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01507",
+    "title": "Immortals Fenyx Rising ™",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01508",
+    "title": "Immortals Fenyx Rising ™",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01510",
+    "title": "Immortals Fenyx Rising ™",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01509",
+    "title": "Immortals Fenyx Rising ™",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02699",
+    "title": "Immortals Fenyx Rising ™ - Demo",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02587",
+    "title": "Immortals Fenyx Rising ™ - Demo",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02707",
+    "title": "Immortals Fenyx Rising ™ - Demo",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02708",
+    "title": "Immortals Fenyx Rising ™ - Demo",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02588",
+    "title": "Immortals Fenyx Rising ™ - Demo",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02902",
+    "title": "In rays of the Light",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02903",
+    "title": "In rays of the Light",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03559",
+    "title": "Infestor",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03560",
+    "title": "Infestor",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03561",
+    "title": "Infestor",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02343",
+    "title": "It Takes Two",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01852",
+    "title": "JUDGE EYES：死神の遺言 Remastered",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02317",
+    "title": "JYDGE",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02740",
+    "title": "Judgment",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02739",
+    "title": "Judgment",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01409",
+    "title": "Just Dance® 2021",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01408",
+    "title": "Just Dance® 2021",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03293",
+    "title": "Kingdom of Arcadia",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03292",
+    "title": "Kingdom of Arcadia",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03294",
+    "title": "Kingdom of Arcadia",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03022",
+    "title": "Ladders by POWGI",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03023",
+    "title": "Ladders by POWGI",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02974",
+    "title": "Legends of Talia: Arcadia",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02972",
+    "title": "Legends of Talia: Arcadia",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02973",
+    "title": "Legends of Talia: Arcadia",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02047",
+    "title": "Life is Strange: True Colors™",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04083",
+    "title": "Loopindex",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04084",
+    "title": "Loopindex",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01856",
+    "title": "MAIDEN",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01857",
+    "title": "MAIDEN",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01858",
+    "title": "MAIDEN",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01859",
+    "title": "MAIDEN",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01416",
+    "title": "MLB® The Show™ 21",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01658",
+    "title": "MOBILE SUIT GUNDAM BATTLE OPERATION 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02451",
+    "title": "MOBILE SUIT GUNDAM BATTLE OPERATION 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02396",
+    "title": "MOBILE SUIT GUNDAM BATTLE OPERATION 2",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02377",
+    "title": "MOTOGP™21",
+    "minFw": 6.0,
+    "fwDisplay": "06.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02376",
+    "title": "MOTOGP™21",
+    "minFw": 6.0,
+    "fwDisplay": "06.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03213",
+    "title": "MOTOGP™21",
+    "minFw": 6.0,
+    "fwDisplay": "06.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01645",
+    "title": "MXGP 2020 - The Official Motocross Videogame",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01646",
+    "title": "MXGP 2020 - The Official Motocross Videogame",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01343",
+    "title": "Madden NFL 21",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01344",
+    "title": "Madden NFL 21",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02966",
+    "title": "Maid of Sker",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02965",
+    "title": "Maid of Sker",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01861",
+    "title": "Maneater",
+    "minFw": 4.3,
+    "fwDisplay": "04.03"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01862",
+    "title": "Maneater",
+    "minFw": 4.3,
+    "fwDisplay": "04.03"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02779",
+    "title": "Manifold Garden",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02778",
+    "title": "Manifold Garden",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01831",
+    "title": "Maquette",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01834",
+    "title": "Maquette",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01833",
+    "title": "Maquette",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01832",
+    "title": "Maquette",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01633",
+    "title": "Marvel's Avengers",
+    "minFw": 7.1,
+    "fwDisplay": "07.01"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01631",
+    "title": "Marvel's Avengers",
+    "minFw": 7.1,
+    "fwDisplay": "07.01"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01632",
+    "title": "Marvel's Avengers",
+    "minFw": 7.1,
+    "fwDisplay": "07.01"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01634",
+    "title": "Marvel's Avengers",
+    "minFw": 7.1,
+    "fwDisplay": "07.01"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01467",
+    "title": "Marvel's Spider-Man Remastered",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01411",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01417",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01418",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01419",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01460",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01461",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01749",
+    "title": "Metro Exodus",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02395",
+    "title": "Metro Exodus",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03089",
+    "title": "Mighty Fight Federation",
+    "minFw": 4.0,
+    "fwDisplay": "04.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03464",
+    "title": "Mighty Goose",
+    "minFw": 5.2,
+    "fwDisplay": "05.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03290",
+    "title": "Mina & Michi",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03289",
+    "title": "Mina & Michi",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01607",
+    "title": "Monster Energy Supercross - The Official Videogame 4",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01608",
+    "title": "Monster Energy Supercross - The Official Videogame 4",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02952",
+    "title": "Monster Energy Supercross - The Official Videogame 4",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01617",
+    "title": "Mortal Kombat 11",
+    "minFw": 6.2,
+    "fwDisplay": "06.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01619",
+    "title": "Mortal Kombat 11",
+    "minFw": 6.2,
+    "fwDisplay": "06.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01618",
+    "title": "Mortal Kombat 11",
+    "minFw": 6.2,
+    "fwDisplay": "06.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02868",
+    "title": "Mortal Shell",
+    "minFw": 4.0,
+    "fwDisplay": "04.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02867",
+    "title": "Mortal Shell",
+    "minFw": 4.0,
+    "fwDisplay": "04.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01387",
+    "title": "NBA 2K21",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02450",
+    "title": "Necromunda: Hired Gun",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02449",
+    "title": "Necromunda: Hired Gun",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02622",
+    "title": "Neon Chrome Overseer Edition",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02623",
+    "title": "Neon Chrome Overseer Edition",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02721",
+    "title": "Neptunia ReVerse",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02763",
+    "title": "Neptunia ReVerse",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01614",
+    "title": "Netflix",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01615",
+    "title": "Netflix",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02995",
+    "title": "New Football Game Online Performance Test",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02994",
+    "title": "New Football Game Online Performance Test",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02992",
+    "title": "New Football Game Online Performance Test",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02993",
+    "title": "New Football Game Online Performance Test",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02462",
+    "title": "Nioh 2 Remastered",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02488",
+    "title": "Nioh 2 Remastered",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02489",
+    "title": "Nioh 2 Remastered",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02463",
+    "title": "Nioh 2 Remastered - The Complete Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02486",
+    "title": "Nioh 2 Remastered - The Complete Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02487",
+    "title": "Nioh 2 Remastered - The Complete Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02464",
+    "title": "Nioh Remastered - The Complete Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02482",
+    "title": "Nioh Remastered - The Complete Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02484",
+    "title": "Nioh Remastered - The Complete Edition",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01412",
+    "title": "No Man's Sky",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02110",
+    "title": "No Man's Sky",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02111",
+    "title": "No Man's Sky",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02112",
+    "title": "No Man's Sky",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01778",
+    "title": "OUTRIDERS",
+    "minFw": 5.8,
+    "fwDisplay": "05.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01779",
+    "title": "OUTRIDERS",
+    "minFw": 5.8,
+    "fwDisplay": "05.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01977",
+    "title": "OUTRIDERS",
+    "minFw": 5.8,
+    "fwDisplay": "05.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01780",
+    "title": "OUTRIDERS",
+    "minFw": 5.8,
+    "fwDisplay": "05.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02284",
+    "title": "OUTRIDERS - DEMO",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02283",
+    "title": "OUTRIDERS - DEMO",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02285",
+    "title": "OUTRIDERS - DEMO",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02286",
+    "title": "OUTRIDERS - DEMO",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03700",
+    "title": "OVIVO",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02117",
+    "title": "Observer: System Redux",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02118",
+    "title": "Observer: System Redux",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01590",
+    "title": "Oddworld: Soulstorm",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02259",
+    "title": "Oddworld: Soulstorm",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03239",
+    "title": "One Escape",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03240",
+    "title": "One Escape",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03243",
+    "title": "Operation Tango",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03315",
+    "title": "Operation Tango",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02552",
+    "title": "Outbreak",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02553",
+    "title": "Outbreak",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02555",
+    "title": "Outbreak Endless Nightmares",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02554",
+    "title": "Outbreak Endless Nightmares",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02544",
+    "title": "Outbreak Epidemic",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02545",
+    "title": "Outbreak Epidemic",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02548",
+    "title": "Outbreak Lost Hope",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02549",
+    "title": "Outbreak Lost Hope",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02546",
+    "title": "Outbreak The New Nightmare",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02547",
+    "title": "Outbreak The New Nightmare",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02550",
+    "title": "Outbreak The Nightmare Chronicles",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02551",
+    "title": "Outbreak The Nightmare Chronicles",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01528",
+    "title": "Overcooked! All You Can Eat",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01529",
+    "title": "Overcooked! All You Can Eat",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01908",
+    "title": "Override 2: Super Mech League",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01907",
+    "title": "Override 2: Super Mech League",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02417",
+    "title": "Override 2: Super Mech League",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02978",
+    "title": "PING REDUX",
+    "minFw": 8.96,
+    "fwDisplay": "08.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02979",
+    "title": "PING REDUX",
+    "minFw": 8.96,
+    "fwDisplay": "08.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02797",
+    "title": "Panda Hero Remastered",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02798",
+    "title": "Panda Hero Remastered",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02934",
+    "title": "Pinkman+",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02935",
+    "title": "Pinkman+",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01735",
+    "title": "Planet Coaster",
+    "minFw": 7.97,
+    "fwDisplay": "07.97"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01736",
+    "title": "Planet Coaster",
+    "minFw": 7.97,
+    "fwDisplay": "07.97"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01935",
+    "title": "Plex",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04317",
+    "title": "Pretty Girls Klondike Solitaire",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04316",
+    "title": "Pretty Girls Klondike Solitaire",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04315",
+    "title": "Pretty Girls Klondike Solitaire",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02081",
+    "title": "Prime Video",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01530",
+    "title": "Puyo Puyo™ Tetris® 2",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01937",
+    "title": "Puyo Puyo™ Tetris® 2",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01938",
+    "title": "Puyo Puyo™ Tetris® 2",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02329",
+    "title": "Puyo Puyo™ Tetris® 2 Demo Version",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03229",
+    "title": "Puyo Puyo™ Tetris® 2 Demo Version",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03230",
+    "title": "Puyo Puyo™ Tetris® 2 Demo Version",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02583",
+    "title": "RIDE 4",
+    "minFw": 7.1,
+    "fwDisplay": "07.01"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01599",
+    "title": "RIDE 4",
+    "minFw": 7.1,
+    "fwDisplay": "07.01"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01598",
+    "title": "RIDE 4",
+    "minFw": 7.1,
+    "fwDisplay": "07.01"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03723",
+    "title": "Rabisco+",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03724",
+    "title": "Rabisco+",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01476",
+    "title": "Ratchet & Clank: Rift Apart",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01474",
+    "title": "Ratchet & Clank: Rift Apart",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01473",
+    "title": "Ratchet & Clank: Rift Apart",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01475",
+    "title": "Ratchet & Clank: Rift Apart",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02332",
+    "title": "Renzo Racer",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02609",
+    "title": "Renzo Racer",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01556",
+    "title": "Resident Evil Village",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01557",
+    "title": "Resident Evil Village",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01559",
+    "title": "Resident Evil Village",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01285",
+    "title": "Returnal",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03303",
+    "title": "Rift Racoon",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03302",
+    "title": "Rift Racoon",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03911",
+    "title": "Rise of The Slime",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03419",
+    "title": "Rise of The Slime",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02091",
+    "title": "Rogue Company",
+    "minFw": 8.96,
+    "fwDisplay": "08.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02092",
+    "title": "Rogue Company",
+    "minFw": 8.96,
+    "fwDisplay": "08.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03284",
+    "title": "Ruinverse",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02920",
+    "title": "Ruinverse",
+    "minFw": 5.16,
+    "fwDisplay": "05.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02174",
+    "title": "SCARLET NEXUS",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02211",
+    "title": "SCARLET NEXUS",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01776",
+    "title": "SCARLET NEXUS",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02064",
+    "title": "SCARLET NEXUS Demo Edition",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02199",
+    "title": "STAR WARS Jedi: Fallen Order™",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02198",
+    "title": "STAR WARS Jedi: Fallen Order™",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03553",
+    "title": "STELLATUM",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03552",
+    "title": "STELLATUM",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03656",
+    "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN TRIAL VERSION",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02976",
+    "title": "Sable's Grimoire",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02977",
+    "title": "Sable's Grimoire",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01288",
+    "title": "Sackboy: A Big Adventure",
+    "minFw": 7.32,
+    "fwDisplay": "07.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01289",
+    "title": "Sackboy: A Big Adventure",
+    "minFw": 7.32,
+    "fwDisplay": "07.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01291",
+    "title": "Sackboy™: A Big Adventure",
+    "minFw": 7.32,
+    "fwDisplay": "07.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01292",
+    "title": "Sackboy™: A Big Adventure",
+    "minFw": 7.32,
+    "fwDisplay": "07.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02873",
+    "title": "Saints Row®: The Third™ Remastered",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02970",
+    "title": "Sakura Succubus",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02968",
+    "title": "Sakura Succubus",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02969",
+    "title": "Sakura Succubus",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03456",
+    "title": "Sakura Succubus 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03454",
+    "title": "Sakura Succubus 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03455",
+    "title": "Sakura Succubus 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04013",
+    "title": "Sakura Succubus 3",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04011",
+    "title": "Sakura Succubus 3",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04012",
+    "title": "Sakura Succubus 3",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02514",
+    "title": "Shakedown: Hawaii",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02515",
+    "title": "Shakedown: Hawaii",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01280",
+    "title": "Share Factory Studio",
+    "minFw": 6.2,
+    "fwDisplay": "06.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02806",
+    "title": "Shing!",
+    "minFw": 6.8,
+    "fwDisplay": "06.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02957",
+    "title": "Shing!",
+    "minFw": 6.8,
+    "fwDisplay": "06.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03120",
+    "title": "Sir Lovelot",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03121",
+    "title": "Sir Lovelot",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03882",
+    "title": "Sir Lovelot",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03649",
+    "title": "Skatemasta Tcheco",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03648",
+    "title": "Skatemasta Tcheco",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03163",
+    "title": "Skyland: Heart of the Mountain",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03164",
+    "title": "Skyland: Heart of the Mountain",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02319",
+    "title": "Sparkle 2",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02320",
+    "title": "Sparkle 2",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02321",
+    "title": "Sparkle Unleashed",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02322",
+    "title": "Sparkle Unleashed",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02306",
+    "title": "Spirit of the North: Enhanced Edition",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02305",
+    "title": "Spirit of the North: Enhanced Edition",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02452",
+    "title": "Subnautica",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03406",
+    "title": "Subnautica",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02453",
+    "title": "Subnautica",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02456",
+    "title": "Subnautica Below Zero",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02457",
+    "title": "Subnautica Below Zero",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03007",
+    "title": "Sumatra: Fate of Yandi",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03008",
+    "title": "Sumatra: Fate of Yandi",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04087",
+    "title": "Sun Wukong VS Robot",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA04088",
+    "title": "Sun Wukong VS Robot",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02745",
+    "title": "Tales of Arise",
+    "minFw": 8.32,
+    "fwDisplay": "08.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02757",
+    "title": "Tannenberg",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02756",
+    "title": "Tannenberg",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01800",
+    "title": "Temtem",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02020",
+    "title": "Tennis World Tour 2",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02019",
+    "title": "Tennis World Tour 2",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02980",
+    "title": "Tennis World Tour 2",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01763",
+    "title": "Terminator: Resistance Enhanced",
+    "minFw": 4.3,
+    "fwDisplay": "04.03"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02474",
+    "title": "Terminator: Resistance Enhanced",
+    "minFw": 4.3,
+    "fwDisplay": "04.03"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02475",
+    "title": "Terminator: Resistance Enhanced",
+    "minFw": 4.3,
+    "fwDisplay": "04.03"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02270",
+    "title": "Tesla Force",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02271",
+    "title": "Tesla Force",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02517",
+    "title": "Tesla vs Lovecraft Game of the Year Edition",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02518",
+    "title": "Tesla vs Lovecraft Game of the Year Edition",
+    "minFw": 2.32,
+    "fwDisplay": "02.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02566",
+    "title": "The Darkside Detective",
+    "minFw": 8.64,
+    "fwDisplay": "08.64"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02567",
+    "title": "The Darkside Detective",
+    "minFw": 8.64,
+    "fwDisplay": "08.64"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02565",
+    "title": "The Darkside Detective: A Fumble in the Dark",
+    "minFw": 8.64,
+    "fwDisplay": "08.64"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02564",
+    "title": "The Darkside Detective: A Fumble in the Dark",
+    "minFw": 8.64,
+    "fwDisplay": "08.64"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02017",
+    "title": "The Elder Scrolls Online",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02018",
+    "title": "The Elder Scrolls Online",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01825",
+    "title": "The Pathless",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01826",
+    "title": "The Pathless",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02104",
+    "title": "The Pathless",
+    "minFw": 2.37,
+    "fwDisplay": "02.37"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02408",
+    "title": "The Pedestrian",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02854",
+    "title": "The Pedestrian",
+    "minFw": 3.0,
+    "fwDisplay": "03.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01913",
+    "title": "The Persistence Enhanced Edition",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01916",
+    "title": "The Persistence Enhanced Edition",
+    "minFw": 4.8,
+    "fwDisplay": "04.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01771",
+    "title": "The Sinking City",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02921",
+    "title": "The Sinking City",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01772",
+    "title": "The Sinking City",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02924",
+    "title": "Thunderflash",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02925",
+    "title": "Thunderflash",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03123",
+    "title": "Title Name",
+    "minFw": 5.2,
+    "fwDisplay": "05.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01396",
+    "title": "Tom Clancy's Rainbow Six® Siege",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01397",
+    "title": "Tom Clancy's Rainbow Six® Siege",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01660",
+    "title": "Tom Clancy's Rainbow Six® Siege",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01401",
+    "title": "Tom Clancy's Rainbow Six® Siege",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02178",
+    "title": "Tony Hawk's™ Pro Skater™ 1 + 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02177",
+    "title": "Tony Hawk's™ Pro Skater™ 1 + 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02176",
+    "title": "Tony Hawk's™ Pro Skater™ 1 + 2",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03341",
+    "title": "Tour de France 2021",
+    "minFw": 3.33,
+    "fwDisplay": "03.33"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03548",
+    "title": "Trails and Traces: The Tomb of Thomas Tew",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03549",
+    "title": "Trails and Traces: The Tomb of Thomas Tew",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01758",
+    "title": "Tubi",
+    "minFw": 8.96,
+    "fwDisplay": "08.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02469",
+    "title": "Twin Robots: Ultimate Edition",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02470",
+    "title": "Twin Robots: Ultimate Edition",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01665",
+    "title": "Twitch",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02931",
+    "title": "UltraGoodness 2",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02932",
+    "title": "UltraGoodness 2",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03168",
+    "title": "UniPlex",
+    "minFw": 6.2,
+    "fwDisplay": "06.02"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03259",
+    "title": "UniPlex",
+    "minFw": 5.0,
+    "fwDisplay": "05.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02758",
+    "title": "Verdun",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02759",
+    "title": "Verdun",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01868",
+    "title": "Vudu Movies and TV",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01363",
+    "title": "WRC 9 FIA World Rally Championship",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01364",
+    "title": "WRC 9 FIA World Rally Championship",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01948",
+    "title": "War Thunder",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01950",
+    "title": "War Thunder",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02190",
+    "title": "War Thunder",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01737",
+    "title": "Warframe",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01980",
+    "title": "Warframe",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02323",
+    "title": "Warframe",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01445",
+    "title": "Warhammer: Chaosbane Enhanced Edition",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01446",
+    "title": "Warhammer: Chaosbane Enhanced Edition",
+    "minFw": 2.38,
+    "fwDisplay": "02.38"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01487",
+    "title": "Watch Dogs®: Legion",
+    "minFw": 8.32,
+    "fwDisplay": "08.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01488",
+    "title": "Watch Dogs®: Legion",
+    "minFw": 8.32,
+    "fwDisplay": "08.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01489",
+    "title": "Watch Dogs®: Legion",
+    "minFw": 8.32,
+    "fwDisplay": "08.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01500",
+    "title": "Watch Dogs®: Legion",
+    "minFw": 8.32,
+    "fwDisplay": "08.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01501",
+    "title": "Watch Dogs®: Legion",
+    "minFw": 8.32,
+    "fwDisplay": "08.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02113",
+    "title": "Werewolf: The Apocalypse - Earthblood",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02114",
+    "title": "Werewolf: The Apocalypse - Earthblood",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02219",
+    "title": "World of Warships: Legends",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02218",
+    "title": "World of Warships: Legends",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01526",
+    "title": "Worms Rumble",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01527",
+    "title": "Worms Rumble",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03308",
+    "title": "Wreckfest",
+    "minFw": 5.8,
+    "fwDisplay": "05.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02384",
+    "title": "Yakuza: Like A Dragon",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02383",
+    "title": "Yakuza: Like A Dragon",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01650",
+    "title": "YouTube",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01651",
+    "title": "YouTube",
+    "minFw": 1.0,
+    "fwDisplay": "01.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02165",
+    "title": "void tRrLM(); ++ver;",
+    "minFw": 2.0,
+    "fwDisplay": "02.00"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03061",
+    "title": "void tRrLM();++ //Void Terrarium++",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03042",
+    "title": "void tRrLM();++ //Void Terrarium++",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02702",
+    "title": "アノダイン２：ダストへの帰還",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02719",
+    "title": "クロスクラッシュ",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02926",
+    "title": "サンダーフラッシュ",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03158",
+    "title": "マニフォールド ガーデン",
+    "minFw": 3.32,
+    "fwDisplay": "03.32"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02097",
+    "title": "ライザのアトリエ２ ～失われた伝承と秘密の妖精～",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03283",
+    "title": "ルインバース",
+    "minFw": 2.8,
+    "fwDisplay": "02.80"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA03241",
+    "title": "ワン･エスケープ 俺の脱獄作戦",
+    "minFw": 2.48,
+    "fwDisplay": "02.48"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA01929",
+    "title": "緋紅結繫",
+    "minFw": 4.81,
+    "fwDisplay": "04.81"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02095",
+    "title": "萊莎的鍊金工房２ ～失落傳說與秘密妖精～",
+    "minFw": 9.96,
+    "fwDisplay": "09.96"
+  },
+  {
+    "platform": "PS5",
+    "ppsa": "PPSA02690",
+    "title": "龍が如く７　光と闇の行方　インターナショナル",
+    "minFw": 3.16,
+    "fwDisplay": "03.16"
+  }
+]
